@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState, useLayoutEffect } from "react";
+import styled, { css } from "styled-components";
 
 const HeaderBlock = styled.header`
   background: #333;
@@ -13,10 +13,26 @@ const HeaderBlock = styled.header`
   z-index: 2;
   transition: all 0.3s 0s ease;
   transition-delay: 0.15s;
+
+  ${props =>
+    props.scrollY !== 0 &&
+    css`
+      width: 140px;
+    `}
 `;
 
 function Header() {
-  return <HeaderBlock>Portfolio</HeaderBlock>;
+  const [scrollY, setScrollY] = useState(0);
+
+  useLayoutEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+  return <HeaderBlock scrollY={scrollY}>Portfolio</HeaderBlock>;
 }
 
 export default Header;
