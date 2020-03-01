@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { useScroll } from "../ScrollContext";
 import media from "../utils/media";
@@ -23,11 +23,12 @@ const Block = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  z-index: 2;
   & > * {
     padding: 60px;
-    /* 스크롤 애니메이션 효과 */
+
     ${ScrollAnimationStyles}
+
     ${media.small} {
       padding: 25px 20px;
     }
@@ -35,16 +36,18 @@ const Block = styled.header`
 
   /* scroll animation (not mobile) */
   @media (min-width: 1024px) {
-    ${props =>
-      props.scrollY > 3 &&
-      css`
-      width: 176px;
-      ${MenuButton}, ${HeaderContent},${Footer} {
-        visibility: hidden;
-        opacity: 0;
-        transition-delay: 0s;
+    ${props => {
+      if (props.scrollY > 3 && !props.openHeader) {
+        return css`
+            width: 176px;
+            ${MenuButton}, ${HeaderContent},${Footer} {
+              visibility: hidden;
+              opacity: 0;
+              transition-delay: 0s;
+            }
+          `;
       }
-    `}
+    }}
   }
 
   /* mobile */
@@ -54,7 +57,6 @@ const Block = styled.header`
     padding: 0;
   }
 `;
-
 const FloatingBlock = styled.div`
   display: flex;
   justify-content: space-between;
@@ -71,6 +73,7 @@ const Logo = styled.div`
   height: 56px;
   min-width: 56px;
   background: ${props => props.theme.point};
+  cursor: pointer;
 `;
 
 const MenuButton = styled.div`
@@ -92,16 +95,35 @@ const HeaderContent = styled.div`
     padding-top: 176px;
   }
   ${media.small} {
-    padding-top: 106px;
+    padding-top: 130px;
+    padding-bottom: 60px;
+    p {
+      padding: 0 20px;
+    }
   }
 `;
 
-const Footer = styled.div``;
+const Footer = styled.div`
+  ${media.small} {
+    display: none;
+  }
+`;
 
 function Header() {
   const { scrollY } = useScroll();
+  const [openHeader, setOpenHeader] = useState(false);
+
   return (
-    <Block scrollY={scrollY}>
+    <Block
+      scrollY={scrollY}
+      openHeader={openHeader}
+      onMouseOver={() => {
+        setOpenHeader(true);
+      }}
+      onMouseOut={() => {
+        setOpenHeader(false);
+      }}
+    >
       <FloatingBlock>
         <Logo />
         <MenuButton />
@@ -109,8 +131,7 @@ function Header() {
       <HeaderContent>
         <p>
           Lorem Ipsum has been the industry's standard dummy text ever since the
-          1500s, when an unknown printer took a galley of type and scrambled it
-          to make a type specimen book.
+          1500s
         </p>
       </HeaderContent>
       <Footer>© SORE, 2020</Footer>
