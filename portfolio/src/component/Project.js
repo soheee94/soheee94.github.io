@@ -12,9 +12,9 @@ const InsideBlock = styled.div`
   width: 100%;
   height: 100%;
   cursor: pointer;
-  &:hover {
+  /* &:hover {
     background: red;
-  }
+  } */
 `;
 
 function Project() {

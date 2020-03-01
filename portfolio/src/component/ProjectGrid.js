@@ -9,11 +9,11 @@ const FullGrid = styled.div`
   transition: all 0.3s 0s ease;
   transition-delay: 0.15s;
 
-  ${props =>
+  /* ${props =>
     props.scrollY !== 0 &&
     css`
       padding-left: 140px;
-    `}
+    `} */
 `;
 
 const GridBlock = styled.div`
