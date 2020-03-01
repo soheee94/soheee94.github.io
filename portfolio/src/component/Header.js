@@ -1,8 +1,8 @@
 import React, { useState, useLayoutEffect } from "react";
 import styled, { css } from "styled-components";
 
-const HeaderBlock = styled.header`
-  background: #333;
+const Block = styled.header`
+  background: ${props => props.theme.main};
   color: #fff;
   position: fixed;
   top: 0;
@@ -10,7 +10,6 @@ const HeaderBlock = styled.header`
   height: 100%;
   width: 33.33%;
   padding: 60px 40px;
-  z-index: 2;
   transition: all 0.3s 0s ease;
   transition-delay: 0.15s;
 
@@ -32,7 +31,7 @@ function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
-  return <HeaderBlock scrollY={scrollY}>Portfolio</HeaderBlock>;
+  return <Block scrollY={scrollY}>Portfolio</Block>;
 }
 
 export default Header;
