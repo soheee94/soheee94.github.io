@@ -24,7 +24,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      {/* <ProjectGrid /> */}
+      <ProjectGrid />
     </ThemeProvider>
   );
 }

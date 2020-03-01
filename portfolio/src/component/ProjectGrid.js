@@ -1,6 +1,7 @@
 import React, { useState, useLayoutEffect } from "react";
 import styled, { css } from "styled-components";
 import Project from "./Project";
+import media from "../utils/media";
 
 const FullGrid = styled.div`
   width: 100%;
@@ -9,11 +10,9 @@ const FullGrid = styled.div`
   transition: all 0.3s 0s ease;
   transition-delay: 0.15s;
 
-  /* ${props =>
-    props.scrollY !== 0 &&
-    css`
-      padding-left: 140px;
-    `} */
+  ${media.medium} {
+    padding: 0;
+  }
 `;
 
 const GridBlock = styled.div`
