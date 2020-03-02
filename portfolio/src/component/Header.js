@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { useScroll } from "../ScrollContext";
 import media from "../utils/media";
 
@@ -61,10 +61,16 @@ const FloatingBlock = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
   ${media.medium} {
     position: fixed;
     background: inherit;
     z-index: 11;
+  }
+
+  /* hamburger menu test */
+  body {
+    background-color: #333;
   }
 `;
 
@@ -76,10 +82,66 @@ const Logo = styled.div`
   cursor: pointer;
 `;
 
+const lineUp = keyframes`
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+`;
+
 const MenuButton = styled.div`
-  width: 56px;
-  height: 56px;
-  background: white;
+  width: 26px;
+  height: 17px;
+  cursor: pointer;
+  position: relative;
+  &:before,
+  &:after,
+  span {
+    background-color: #fff;
+    content: "";
+    display: block;
+    height: 3px;
+    transition: all 200ms ease-in-out;
+  }
+  &:before {
+    margin-bottom: 11px;
+    animation: ${lineUp} ease 1s infinite 1s alternate;
+  }
+
+  span {
+    width: 100%;
+    position: absolute;
+    top: 7px;
+    animation: ${lineUp} ease 1.4s infinite 0.6s alternate;
+  }
+
+  &:after {
+    animation: ${lineUp} ease 1.8s infinite 0.2s alternate;
+  }
+
+  /* hover animation */
+  &:hover {
+    &:before,
+    &:after,
+    span {
+      background-color: ${props => props.theme.point};
+    }
+  }
+
+  /* close button */
+  /* &:hover {
+    &:before {
+      transform: translateY(7px) rotate(45deg);
+    }
+    &:after {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+    span {
+      background: none;
+    }
+  } */
 `;
 
 const HeaderContent = styled.div`
@@ -126,7 +188,9 @@ function Header() {
     >
       <FloatingBlock>
         <Logo />
-        <MenuButton />
+        <MenuButton>
+          <span></span>
+        </MenuButton>
       </FloatingBlock>
       <HeaderContent>
         <p>
