@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled, { css, keyframes } from "styled-components";
 import { useScroll } from "../ScrollContext";
 import media from "../utils/media";
+import Menu from "./Menu";
 
 const ScrollAnimationStyles = css`
   visibility: visible;
@@ -62,10 +63,10 @@ const FloatingBlock = styled.div`
   justify-content: space-between;
   width: 100%;
   align-items: center;
+  z-index: 11;
   ${media.medium} {
     position: fixed;
     background: inherit;
-    z-index: 11;
   }
 
   /* hamburger menu test */
@@ -131,17 +132,24 @@ const MenuButton = styled.div`
   }
 
   /* close button */
-  /* &:hover {
-    &:before {
-      transform: translateY(7px) rotate(45deg);
-    }
-    &:after {
-      transform: translateY(-7px) rotate(-45deg);
-    }
-    span {
-      background: none;
-    }
-  } */
+  ${props =>
+    props.openMenu &&
+    css`
+      &:before,
+      &:after,
+      span {
+        animation: none;
+      }
+      &:before {
+        transform: translateY(7px) rotate(45deg);
+      }
+      &:after {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+      span {
+        background: none !important;
+      }
+    `}
 `;
 
 const HeaderContent = styled.div`
@@ -166,6 +174,7 @@ const HeaderContent = styled.div`
 `;
 
 const Footer = styled.div`
+  z-index: 11;
   ${media.small} {
     display: none;
   }
@@ -174,7 +183,7 @@ const Footer = styled.div`
 function Header() {
   const { scrollY } = useScroll();
   const [openHeader, setOpenHeader] = useState(false);
-
+  const [openMenu, setOpenMenu] = useState(false);
   return (
     <Block
       scrollY={scrollY}
@@ -188,7 +197,7 @@ function Header() {
     >
       <FloatingBlock>
         <Logo />
-        <MenuButton>
+        <MenuButton onClick={() => setOpenMenu(!openMenu)} openMenu={openMenu}>
           <span></span>
         </MenuButton>
       </FloatingBlock>
@@ -199,6 +208,13 @@ function Header() {
         </p>
       </HeaderContent>
       <Footer>© SORE, 2020</Footer>
+      {openMenu && (
+        <Menu
+          onMouseOut={() => {
+            setOpenMenu(false);
+          }}
+        />
+      )}
     </Block>
   );
 }
