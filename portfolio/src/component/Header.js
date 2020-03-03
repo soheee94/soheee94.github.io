@@ -28,8 +28,6 @@ const Block = styled.header`
   & > * {
     padding: 60px;
 
-    ${ScrollAnimationStyles}
-
     ${media.small} {
       padding: 25px 20px;
     }
@@ -93,6 +91,7 @@ const lineUp = keyframes`
 `;
 
 const MenuButton = styled.div`
+  ${ScrollAnimationStyles}
   width: 26px;
   height: 17px;
   cursor: pointer;
@@ -156,7 +155,7 @@ const HeaderContent = styled.div`
   padding: 0 30px;
   font-size: 25px;
   font-weight: 700;
-
+  ${ScrollAnimationStyles}
   p {
     padding: 0 60px;
   }
@@ -174,6 +173,7 @@ const HeaderContent = styled.div`
 `;
 
 const Footer = styled.div`
+  ${ScrollAnimationStyles}
   z-index: 11;
   ${media.small} {
     display: none;
@@ -184,6 +184,7 @@ function Header() {
   const { scrollY } = useScroll();
   const [openHeader, setOpenHeader] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
+
   return (
     <Block
       scrollY={scrollY}
@@ -193,6 +194,7 @@ function Header() {
       }}
       onMouseOut={() => {
         setOpenHeader(false);
+        setOpenMenu(false);
       }}
     >
       <FloatingBlock>
@@ -202,19 +204,10 @@ function Header() {
         </MenuButton>
       </FloatingBlock>
       <HeaderContent>
-        <p>
-          Lorem Ipsum has been the industry's standard dummy text ever since the
-          1500s
-        </p>
+        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
       </HeaderContent>
       <Footer>© SORE, 2020</Footer>
-      {openMenu && (
-        <Menu
-          onMouseOut={() => {
-            setOpenMenu(false);
-          }}
-        />
-      )}
+      <Menu openMenu={openMenu} />
     </Block>
   );
 }

@@ -1,14 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
-
-const show = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-`;
+import styled, { css } from "styled-components";
 
 const Block = styled.div`
   background: black;
@@ -18,15 +9,22 @@ const Block = styled.div`
   z-index: 7;
   top: 0;
   left: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   display: flex;
   align-items: center;
   opacity: 0;
-  animation: ${show} ease 0.3s;
+  visibility: hidden;
 
   div {
     padding: 0 30px;
   }
+
+  ${props =>
+    props.openMenu &&
+    css`
+      opacity: 1;
+      visibility: visible;
+    `}
 `;
 
 const MenuItem = styled.a`
@@ -39,9 +37,9 @@ const MenuItem = styled.a`
   letter-spacing: 0.15em;
 `;
 
-function Menu({ onMouseOut }) {
+function Menu({ openMenu }) {
   return (
-    <Block onMouseOut={onMouseOut}>
+    <Block openMenu={openMenu}>
       <div>
         <MenuItem>About</MenuItem>
         <MenuItem>Works</MenuItem>
