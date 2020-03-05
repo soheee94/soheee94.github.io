@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import styled, { css, keyframes } from "styled-components";
 import { useScroll } from "../ScrollContext";
 import media from "../utils/media";
@@ -184,7 +184,14 @@ function Header() {
   const { scrollY } = useScroll();
   const [openHeader, setOpenHeader] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
+  useLayoutEffect(() => {
+    const handleScroll = () => {
+      if (!openHeader) setOpenMenu(false);
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
   return (
     <Block
       scrollY={scrollY}
@@ -192,9 +199,8 @@ function Header() {
       onMouseOver={() => {
         setOpenHeader(true);
       }}
-      onMouseOut={() => {
+      onMouseLeave={() => {
         setOpenHeader(false);
-        setOpenMenu(false);
       }}
     >
       <FloatingBlock>

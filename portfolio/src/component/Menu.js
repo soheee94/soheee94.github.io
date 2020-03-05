@@ -1,12 +1,27 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
+function transitionTimer() {
+  let styles = "";
+
+  for (let i = 0; i < 3; i++) {
+    styles += `
+      &:nth-of-type(${i + 1}) {
+        transition-delay: ${0.25 * i}s;
+       }
+     `;
+  }
+
+  return css`
+    ${styles}
+  `;
+}
+
 const Block = styled.div`
   background: black;
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 7;
   top: 0;
   left: 0;
   transition: all 0.3s ease-in-out;
@@ -24,6 +39,12 @@ const Block = styled.div`
     css`
       opacity: 1;
       visibility: visible;
+
+      ${MenuItem} {
+        opacity: 1;
+        transform: translateX(0) translateZ(0);
+        ${transitionTimer()};
+      }
     `}
 `;
 
@@ -35,6 +56,13 @@ const MenuItem = styled.a`
   font-family: "Roboto";
   display: block;
   letter-spacing: 0.15em;
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateX(-200px) translateZ(-1000px);
+  cursor: pointer;
+  &:hover {
+    color: ${props => props.theme.point};
+  }
 `;
 
 function Menu({ openMenu }) {
