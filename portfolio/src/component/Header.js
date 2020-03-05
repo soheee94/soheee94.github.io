@@ -65,6 +65,11 @@ const FloatingBlock = styled.div`
   ${media.medium} {
     position: fixed;
     background: inherit;
+    ${props =>
+      props.openMenu &&
+      css`
+        background: none;
+      `}
   }
 
   /* hamburger menu test */
@@ -130,6 +135,16 @@ const MenuButton = styled.div`
     }
   }
 
+  ${media.medium} {
+    &:hover {
+      &:before,
+      &:after,
+      span {
+        background-color: white;
+      }
+    }
+  }
+
   /* close button */
   ${props =>
     props.openMenu &&
@@ -162,6 +177,7 @@ const HeaderContent = styled.div`
 
   ${media.medium} {
     padding-top: 176px;
+    padding-bottom: 60px;
   }
   ${media.small} {
     padding-top: 130px;
@@ -175,7 +191,7 @@ const HeaderContent = styled.div`
 const Footer = styled.div`
   ${ScrollAnimationStyles}
   z-index: 11;
-  ${media.small} {
+  ${media.medium} {
     display: none;
   }
 `;
@@ -203,7 +219,7 @@ function Header() {
         setOpenHeader(false);
       }}
     >
-      <FloatingBlock>
+      <FloatingBlock openMenu={openMenu}>
         <Logo />
         <MenuButton onClick={() => setOpenMenu(!openMenu)} openMenu={openMenu}>
           <span></span>

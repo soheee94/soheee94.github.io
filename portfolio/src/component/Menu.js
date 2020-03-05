@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import media from "../utils/media";
 
 function transitionTimer() {
   let styles = "";
@@ -30,8 +31,17 @@ const Block = styled.div`
   opacity: 0;
   visibility: hidden;
 
+  /* mobile */
+  ${media.medium} {
+    position: fixed;
+  }
+
   div {
     padding: 0 30px;
+    ${media.medium} {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   ${props =>
