@@ -29,6 +29,11 @@ const InsideBlock = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.5);
+  border-radius: 18px;
+  p {
+    transition: all 0.25s ease-in-out;
+  }
   &:hover {
     p {
       color: ${props => props.theme.point};
