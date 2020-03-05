@@ -10,6 +10,12 @@ const FullGrid = styled.div`
   transition: all 0.3s 0s ease;
   transition-delay: 0.15s;
 
+  ${props =>
+    props.scrollY > 3 &&
+    css`
+      padding-left: 176px;
+    `}
+
   ${media.medium} {
     padding: 0;
   }
@@ -35,11 +41,11 @@ function ProjectGrid() {
   return (
     <FullGrid scrollY={scrollY}>
       <GridBlock>
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
+        <Project title="테스트" description="나는야 테스트 설명" />
+        <Project title="테스트" description="나는야 테스트 설명" />
+        <Project title="테스트" description="나는야 테스트 설명" />
+        <Project title="테스트" description="나는야 테스트 설명" />
+        <Project title="테스트" description="나는야 테스트 설명" />
       </GridBlock>
     </FullGrid>
   );
