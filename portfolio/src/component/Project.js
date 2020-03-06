@@ -39,6 +39,7 @@ const grain = keyframes`
 const InsideBlock = styled.div`
   margin: 10px;
   background-image: linear-gradient(black, black), url(${sample});
+  /* background-image : url(${sample}); */
   background-blend-mode: saturation;
   background-position: center;
   background-size: cover;
@@ -54,13 +55,14 @@ const InsideBlock = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.5);
+  transition: all 0.35s ease;
   border-radius: 18px;
   overflow: hidden;
   p {
     transition: all 0.25s ease-in-out;
   }
   &:hover {
+    box-shadow: 0px 5px 24px rgba(93, 93, 93, 0.5);
     p {
       color: ${props => props.theme.point};
     }

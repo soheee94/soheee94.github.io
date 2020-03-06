@@ -5,8 +5,8 @@ import { ThemeProvider } from "styled-components";
 import { useScroll } from "./ScrollContext";
 
 const theme = {
-  main: "#333",
-  point: "orange",
+  main: "#f2d1a8",
+  point: "#202ba2",
   white: "#fff"
 };
 

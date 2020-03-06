@@ -1,6 +1,6 @@
 import React, { useState, useLayoutEffect } from "react";
 import styled, { css, keyframes } from "styled-components";
-import { useScroll } from "../ScrollContext";
+import { useScroll, useHeader } from "../ScrollContext";
 import media from "../utils/media";
 import Menu from "./Menu";
 
@@ -82,7 +82,7 @@ const Logo = styled.div`
   width: 56px;
   height: 56px;
   min-width: 56px;
-  background: ${props => props.theme.point};
+  background: ${props => props.theme.white};
   cursor: pointer;
 `;
 
@@ -171,6 +171,7 @@ const HeaderContent = styled.div`
   font-size: 25px;
   font-weight: 700;
   ${ScrollAnimationStyles}
+  color : ${props => props.theme.point};
   p {
     padding: 0 60px;
   }
@@ -198,7 +199,7 @@ const Footer = styled.div`
 
 function Header() {
   const { scrollY } = useScroll();
-  const [openHeader, setOpenHeader] = useState(false);
+  const { openHeader, setOpenHeader } = useHeader();
   const [openMenu, setOpenMenu] = useState(false);
   useLayoutEffect(() => {
     const handleScroll = () => {
@@ -208,6 +209,13 @@ function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
+
+  const onMouseLeave = () => {
+    setOpenHeader(false);
+    if (scrollY > 3) {
+      setOpenMenu(false);
+    }
+  };
   return (
     <Block
       scrollY={scrollY}
@@ -215,9 +223,7 @@ function Header() {
       onMouseOver={() => {
         setOpenHeader(true);
       }}
-      onMouseLeave={() => {
-        setOpenHeader(false);
-      }}
+      onMouseLeave={onMouseLeave}
     >
       <FloatingBlock openMenu={openMenu}>
         <Logo />
@@ -226,9 +232,12 @@ function Header() {
         </MenuButton>
       </FloatingBlock>
       <HeaderContent>
-        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        <p>
+          Lorem Ipsum has been the industry's standard dummy text ever since the
+          1500s
+        </p>
       </HeaderContent>
-      <Footer>© SORE, 2020</Footer>
+      <Footer></Footer>
       <Menu openMenu={openMenu} />
     </Block>
   );

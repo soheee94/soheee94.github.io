@@ -19,7 +19,7 @@ function transitionTimer() {
 }
 
 const Block = styled.div`
-  background: black;
+  background: ${props => props.theme.point};
   width: 100%;
   height: 100%;
   position: absolute;
@@ -59,7 +59,7 @@ const Block = styled.div`
 `;
 
 const MenuItem = styled.a`
-  color: #fff;
+  color: ${props => props.theme.main};
   font-size: 28px;
   margin-bottom: 20px;
   font-weight: 700;

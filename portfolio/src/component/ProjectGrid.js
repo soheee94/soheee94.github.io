@@ -2,6 +2,7 @@ import React, { useState, useLayoutEffect } from "react";
 import styled, { css } from "styled-components";
 import Project from "./Project";
 import media from "../utils/media";
+import { useScroll, useHeader } from "../ScrollContext";
 
 const FullGrid = styled.div`
   width: 100%;
@@ -12,6 +13,7 @@ const FullGrid = styled.div`
 
   ${props =>
     props.scrollY > 3 &&
+    !props.openHeader &&
     css`
       padding-left: 176px;
     `}
@@ -28,18 +30,11 @@ const GridBlock = styled.div`
 `;
 
 function ProjectGrid() {
-  const [scrollY, setScrollY] = useState(0);
+  const { scrollY } = useScroll();
+  const { openHeader } = useHeader();
 
-  useLayoutEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
   return (
-    <FullGrid scrollY={scrollY}>
+    <FullGrid scrollY={scrollY} openHeader={openHeader}>
       <GridBlock>
         <Project title="테스트" description="나는야 테스트 설명" />
         <Project title="테스트" description="나는야 테스트 설명" />
