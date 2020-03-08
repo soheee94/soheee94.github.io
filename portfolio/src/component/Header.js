@@ -168,12 +168,24 @@ const MenuButton = styled.div`
 
 const HeaderContent = styled.div`
   padding: 0 30px;
-  font-size: 25px;
-  font-weight: 700;
+  /* font-size: 25px; */
+ 
   ${ScrollAnimationStyles}
   color : ${props => props.theme.point};
-  p {
-    padding: 0 60px;
+  &>* {
+    padding: 0 20px;
+  }
+  p{
+    letter-spacing: -0.055em;
+    font-weight : 400;
+    line-height: 2.3vw;
+    font-size: 1.4vw;
+  }
+  h2{
+    font-weight: 700;
+    letter-spacing: -0.065em;
+    font-size : 2.5vw;
+
   }
 
   ${media.medium} {
@@ -232,9 +244,19 @@ function Header() {
         </MenuButton>
       </FloatingBlock>
       <HeaderContent>
+        <h2>
+          설명할 줄 아는,
+          <br /> 디자이너 정이레 입니다.
+        </h2>
         <p>
-          Lorem Ipsum has been the industry's standard dummy text ever since the
-          1500s
+          다른 사람에게 부끄럽지 않은
+          <br />
+          프로그램을 만들기 위해 노력하며,
+          <br />
+          하나의 문제를 코드로 해결하는 것을 즐깁니다. <br />
+          UI/UX 트렌드에도 항상 관심을 가지며,
+          <br />
+          디자인을 생각한 소스코드를 작성합니다.
         </p>
       </HeaderContent>
       <Footer></Footer>
