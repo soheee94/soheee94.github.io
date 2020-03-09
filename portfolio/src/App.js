@@ -1,37 +1,42 @@
-import React, { useLayoutEffect } from "react";
-import Header from "./component/Header";
-import ProjectGrid from "./component/ProjectGrid";
+import React from "react";
+
 import { ThemeProvider } from "styled-components";
-import { useScroll } from "./ScrollContext";
+import { ScrollProvider } from "./ScrollContext";
 import Typography from "./Typography";
+import { Switch, Route } from "react-router-dom";
+import Main from "./page/Main";
+import Work from "./page/Work";
 
 const theme = {
-  main: "#f2d1a8",
-  point: "#202ba2",
-  white: "#fff",
-  palette: {
-    main: "#f2d1a8",
-    point: "#202ba2",
-    white: "#fff"
-  }
+  main: "#FFDBAF",
+  point: "#20202F",
+  white: "#fff"
 };
 
 function App() {
-  const { setScrollY } = useScroll();
-  useLayoutEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
-
   return (
     <ThemeProvider theme={theme}>
       <Typography>
-        <Header />
-        <ProjectGrid />
+        <Switch>
+          <Route
+            path="/"
+            component={() => (
+              <ScrollProvider>
+                <Main />
+              </ScrollProvider>
+            )}
+            exact
+          />
+          <Route path="/work/:title" component={Work} />
+          <Route
+            render={({ location }) => (
+              <div>
+                <h2>이 페이지는 존재하지 않아욧!</h2>
+                <p>{location.pathname}</p>
+              </div>
+            )}
+          />
+        </Switch>
       </Typography>
     </ThemeProvider>
   );

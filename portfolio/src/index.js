@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 import "./style/main.scss";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { ScrollProvider } from "./ScrollContext";
+import { BrowserRouter } from "react-router-dom"; // browsuerRouter 불러오기
 
 ReactDOM.render(
-  <ScrollProvider>
+  <BrowserRouter>
     <App />
-  </ScrollProvider>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
 serviceWorker.unregister();

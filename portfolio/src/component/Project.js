@@ -2,6 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import media from "../utils/media";
 import sample from "../asset/sample.jpg";
+import { useHistory } from "react-router-dom";
 
 const Block = styled.div`
   width: 50%;
@@ -86,8 +87,9 @@ const Title = styled.h2`
 `;
 
 function Project({ title, description }) {
+  const history = useHistory();
   return (
-    <Block>
+    <Block onClick={() => history.push(`/work/${title}`)}>
       <InsideBlock>
         <Title>{title}</Title>
         <p>{description}</p>
