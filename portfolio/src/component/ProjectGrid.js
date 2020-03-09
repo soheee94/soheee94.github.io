@@ -10,12 +10,13 @@ const FullGrid = styled.div`
   position: relative;
   transition: all 0.3s 0s ease;
   transition-delay: 0.15s;
+  background: #fafafa;
 
   ${props =>
     props.scrollY > 3 &&
     !props.openHeader &&
     css`
-      padding-left: 176px;
+      padding-left: 132px;
     `}
 
   ${media.medium} {
@@ -36,11 +37,14 @@ function ProjectGrid() {
   return (
     <FullGrid scrollY={scrollY} openHeader={openHeader}>
       <GridBlock>
-        <Project title="테스트" description="나는야 테스트 설명" />
-        <Project title="테스트" description="나는야 테스트 설명" />
-        <Project title="테스트" description="나는야 테스트 설명" />
-        <Project title="테스트" description="나는야 테스트 설명" />
-        <Project title="테스트" description="나는야 테스트 설명" />
+        <Project title="POM-CHECKER" description="나는야 테스트 설명" />
+        <Project title="MEDISIUM" description="나는야 테스트 설명" />
+        <Project title="License Key Manager" description="나는야 테스트 설명" />
+        <Project title="FIT-CHECKER" description="나는야 테스트 설명" />
+        <Project
+          title="POM-CHECKER Landing Page"
+          description="나는야 테스트 설명"
+        />
       </GridBlock>
     </FullGrid>
   );

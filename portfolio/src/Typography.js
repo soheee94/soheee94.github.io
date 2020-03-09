@@ -24,8 +24,13 @@ const TypographyBlock = styled.div`
     letter-spacing: -0.035rem;
     font-weight: 700;
   }
-  p {
+  h1 + p {
     font-size: 1.375rem;
+    line-height: 2.25rem;
+    letter-spacing: -0.055rem;
+  }
+  p {
+    font-size: 1.125rem;
     line-height: 2.25rem;
     letter-spacing: -0.055rem;
   }
