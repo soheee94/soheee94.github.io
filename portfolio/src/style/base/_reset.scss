@@ -1,8 +1,14 @@
+html {
+  font-size: 16px;
+  @media (max-width: 1440px) {
+    font-size: 14px;
+  }
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Noto Sans KR";
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;

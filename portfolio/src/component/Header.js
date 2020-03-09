@@ -23,7 +23,10 @@ const Block = styled.header`
   transition-delay: 0.15s;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+
+  /* justify-content: space-between; */
   z-index: 2;
   & > * {
     padding: 60px;
@@ -38,13 +41,13 @@ const Block = styled.header`
     ${props => {
       if (props.scrollY > 3 && !props.openHeader) {
         return css`
-            width: 176px;
-            ${MenuButton}, ${HeaderContent},${Footer} {
-              visibility: hidden;
-              opacity: 0;
-              transition-delay: 0s;
-            }
-          `;
+          width: 176px;
+          ${MenuButton}, ${HeaderContent} {
+            visibility: hidden;
+            opacity: 0;
+            transition-delay: 0s;
+          }
+        `;
       }
     }}
   }
@@ -59,18 +62,17 @@ const Block = styled.header`
 const FloatingBlock = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: inherit;
   align-items: center;
   z-index: 11;
-  ${media.medium} {
-    position: fixed;
-    background: inherit;
-    ${props =>
-      props.openMenu &&
-      css`
-        background: none;
-      `}
-  }
+  position: fixed;
+  background: inherit;
+  top: 0;
+  ${props =>
+    props.openMenu &&
+    css`
+      background: none;
+    `}
 
   /* hamburger menu test */
   body {
@@ -168,25 +170,13 @@ const MenuButton = styled.div`
 
 const HeaderContent = styled.div`
   padding: 0 30px;
-  /* font-size: 25px; */
  
   ${ScrollAnimationStyles}
   color : ${props => props.theme.point};
   &>* {
     padding: 0 20px;
   }
-  p{
-    letter-spacing: -0.055em;
-    font-weight : 400;
-    line-height: 2.3vw;
-    font-size: 1.4vw;
-  }
-  h2{
-    font-weight: 700;
-    letter-spacing: -0.065em;
-    font-size : 2.5vw;
 
-  }
 
   ${media.medium} {
     padding-top: 176px;
@@ -201,13 +191,13 @@ const HeaderContent = styled.div`
   }
 `;
 
-const Footer = styled.div`
-  ${ScrollAnimationStyles}
-  z-index: 11;
-  ${media.medium} {
-    display: none;
-  }
-`;
+// const Footer = styled.div`
+//   ${ScrollAnimationStyles}
+//   z-index: 11;
+//   ${media.medium} {
+//     display: none;
+//   }
+// `;
 
 function Header() {
   const { scrollY } = useScroll();
@@ -244,10 +234,11 @@ function Header() {
         </MenuButton>
       </FloatingBlock>
       <HeaderContent>
-        <h2>
-          설명할 줄 아는,
-          <br /> 디자이너 정이레 입니다.
-        </h2>
+        <h1>
+          WEB Front-End
+          <br />
+          개발자 한소희 입니다.
+        </h1>
         <p>
           다른 사람에게 부끄럽지 않은
           <br />
@@ -259,7 +250,6 @@ function Header() {
           디자인을 생각한 소스코드를 작성합니다.
         </p>
       </HeaderContent>
-      <Footer></Footer>
       <Menu openMenu={openMenu} />
     </Block>
   );
