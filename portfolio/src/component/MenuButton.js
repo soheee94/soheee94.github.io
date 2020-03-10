@@ -1,5 +1,6 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
+import media from "../utils/media";
 
 const lineUp = keyframes`
   0% {
@@ -8,6 +9,13 @@ const lineUp = keyframes`
   100% {
     width: 100%;
   }
+`;
+
+const ScrollAnimationStyles = css`
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.15s ease;
+  transition-delay: 0.5s;
 `;
 
 const MenuButtonBlock = styled.div`

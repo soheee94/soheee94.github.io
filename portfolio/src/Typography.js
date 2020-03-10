@@ -25,12 +25,15 @@ const TypographyBlock = styled.div`
     font-size: 1rem;
     line-height: 1.6rem;
     letter-spacing: -0.055rem;
+    /* padding-bottom: 30px;
+    ${media.small} {
+      padding-bottom: 0;
+    } */
   }
   p {
     font-size: 0.875rem;
     line-height: 2.25rem;
     letter-spacing: -0.085rem;
-    padding-bottom: 20px;
   }
 `;
 

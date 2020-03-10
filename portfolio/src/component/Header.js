@@ -22,7 +22,6 @@ const Block = styled.header`
   transition: all 0.3s 0s ease;
   transition-delay: 0.15s;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 2;
@@ -44,7 +43,7 @@ const Block = styled.header`
   }}
 
   ${media.small} {
-    align-items: flex-start;
+    justify-content: flex-start;
     width: 100%;
     position: relative;
     padding: 0;
@@ -80,14 +79,17 @@ const Logo = styled.div`
 `;
 
 const HeaderContent = styled.div`
-  padding: 0  2rem;
- 
   ${ScrollAnimationStyles}
   color : ${props => props.theme.point};
-
+  /* margin-left : -1rem; */
+  margin-bottom : 4rem;
+  ${media.medium} {
+    margin : 0;
+    padding: 0 2rem;
+  }
   ${media.small} {
     padding-top: 98px;
-    padding-bottom: 25px;
+    padding-bottom: 40px;
   }
 
 `;
@@ -136,7 +138,7 @@ function Header() {
           <br />
           프로그램을 만들기 위해 노력하며,
           <br />
-          하나의 문제를 코드로 해결하는 것을 즐깁니다. <br />
+          문제를 코드로 해결하는 것을 즐깁니다. <br />
           UI/UX 트렌드에도 항상 관심을 가지며,
           <br />
           디자인을 생각한 소스코드를 작성합니다.
