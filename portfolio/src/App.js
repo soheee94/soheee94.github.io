@@ -18,7 +18,14 @@ function App() {
           )}
           exact
         />
-        <Route path="/work/:title" component={WorkPage} />
+        <Route
+          path="/work/:title"
+          component={({ match }) => (
+            <ScrollProvider>
+              <WorkPage match={match} />
+            </ScrollProvider>
+          )}
+        />
         <Route
           render={({ location }) => (
             <div>

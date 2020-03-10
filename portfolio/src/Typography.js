@@ -30,11 +30,11 @@ const TypographyBlock = styled.div`
       padding-bottom: 0;
     } */
   }
-  /* p {
-    font-size: 0.875rem;
-    line-height: 2.25rem;
-    letter-spacing: -0.085rem;
-  } */
+  h1 + p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.055rem;
+  }
 `;
 
 function Typography({ children }) {
