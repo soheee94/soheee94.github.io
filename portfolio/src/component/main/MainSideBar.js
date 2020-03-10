@@ -66,6 +66,7 @@ const FloatingLogo = styled.div`
 const Introduce = styled.div`
   color: ${palette.point};
   margin-bottom: 4rem;
+  margin-left: -2rem;
   ${ScrollAnimationStyles}
 
   ${media.medium} {
@@ -79,4 +80,4 @@ const Introduce = styled.div`
   }
 `;
 
-export default MainSideBar;
+export default React.memo(MainSideBar);

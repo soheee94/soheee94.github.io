@@ -91,9 +91,13 @@ const RightBlock = styled.div`
   position: relative;
   transition: all 0.3s 0s ease;
   transition-delay: 0.15s;
-  background: #fafafa;
-  display: flex;
-  flex-wrap: wrap;
+  background: black;
+
+  & > div {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   ${media.small} {
     padding: 0;
@@ -101,7 +105,11 @@ const RightBlock = styled.div`
 `;
 
 const Right = function({ children }) {
-  return <RightBlock>{children}</RightBlock>;
+  return (
+    <RightBlock>
+      <div>{children}</div>
+    </RightBlock>
+  );
 };
 
 MainTemplate.Right = Right;
