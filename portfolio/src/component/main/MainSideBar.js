@@ -3,12 +3,14 @@ import styled, { css } from "styled-components";
 import palette from "../../utils/palette";
 import media from "../../utils/media";
 import logo from "../../asset/logo.png";
+import { useHistory } from "react-router-dom";
 
 function MainSideBar() {
+  const history = useHistory();
   return (
     <>
       <FloatingLogo>
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" onClick={() => history.push(`/`)} />
       </FloatingLogo>
       <Introduce>
         <h1>

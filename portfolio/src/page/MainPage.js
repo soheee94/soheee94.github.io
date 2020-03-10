@@ -10,12 +10,13 @@ function MainPage() {
   // set scroll Y position
   const { setScrollY } = useScroll();
   useEffect(() => {
+    window.scrollTo(0, 0);
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  });
+  }, [setScrollY]);
 
   return (
     <MainTemplate>
