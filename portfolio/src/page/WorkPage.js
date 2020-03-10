@@ -3,8 +3,7 @@ import PageTemplate from "../component/common/PageTemplate";
 import WorkSideBar from "../component/work/WorkSideBar";
 import { useScroll } from "../ScrollContext";
 
-function WorkPage({ match }) {
-  const { title } = match.params;
+function WorkPage() {
   // set scroll Y position
   const { setScrollY } = useScroll();
   useEffect(() => {
@@ -20,7 +19,7 @@ function WorkPage({ match }) {
       <PageTemplate.Left>
         <WorkSideBar />
       </PageTemplate.Left>
-      <PageTemplate.Right>{title}</PageTemplate.Right>
+      <PageTemplate.Right></PageTemplate.Right>
     </PageTemplate>
   );
 }

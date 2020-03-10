@@ -1,14 +1,12 @@
 import React from "react";
-import styled, { css } from "styled-components";
-import palette from "../../utils/palette";
-import media from "../../utils/media";
 import FloatingLogo from "../common/FloatingLogo";
+import SideBarContent from "../common/SideBarContent";
 
 function MainSideBar() {
   return (
     <>
       <FloatingLogo />
-      <Introduce>
+      <SideBarContent>
         <h1>
           WEB Front-End
           <br />
@@ -24,33 +22,9 @@ function MainSideBar() {
           <br />
           디자인을 생각한 소스코드를 작성합니다.
         </p>
-      </Introduce>
+      </SideBarContent>
     </>
   );
 }
-
-const ScrollAnimationStyles = css`
-  visibility: visible;
-  opacity: 1;
-  transition: all 0.15s ease;
-  transition-delay: 0.5s;
-`;
-
-const Introduce = styled.div`
-  color: ${palette.point};
-  margin-bottom: 2rem;
-  margin-left: -0.5rem;
-  ${ScrollAnimationStyles}
-
-  ${media.medium} {
-    margin: 0;
-    padding: 0 2rem;
-  }
-  ${media.small} {
-    padding-top: 98px;
-    padding-bottom: 40px;
-    width: 100%;
-  }
-`;
 
 export default React.memo(MainSideBar);
