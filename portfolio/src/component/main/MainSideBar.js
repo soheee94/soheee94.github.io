@@ -2,16 +2,12 @@ import React from "react";
 import styled, { css } from "styled-components";
 import palette from "../../utils/palette";
 import media from "../../utils/media";
-import logo from "../../asset/logo.png";
-import { useHistory } from "react-router-dom";
+import FloatingLogo from "../common/FloatingLogo";
 
 function MainSideBar() {
-  const history = useHistory();
   return (
     <>
-      <FloatingLogo>
-        <img src={logo} alt="logo" onClick={() => history.push(`/`)} />
-      </FloatingLogo>
+      <FloatingLogo />
       <Introduce>
         <h1>
           WEB Front-End
@@ -40,32 +36,10 @@ const ScrollAnimationStyles = css`
   transition-delay: 0.5s;
 `;
 
-const FloatingLogo = styled.div`
-  width: inherit;
-  z-index: 3;
-  position: fixed;
-  background: inherit;
-  top: 0;
-  left: 0;
-  padding: 3rem;
-
-  ${media.medium} {
-    padding: 2rem;
-  }
-  ${media.small} {
-    padding: 25px 20px;
-  }
-
-  img {
-    width: 48px;
-    cursor: pointer;
-  }
-`;
-
 const Introduce = styled.div`
   color: ${palette.point};
   margin-bottom: 2rem;
-
+  margin-left: -0.5rem;
   ${ScrollAnimationStyles}
 
   ${media.medium} {
