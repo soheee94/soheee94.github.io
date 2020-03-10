@@ -7,7 +7,6 @@ const TypographyBlock = styled.div`
     font-size: 2rem;
     line-height: 2.91rem;
     letter-spacing: -0.065rem;
-    margin: 0;
     margin-bottom: 1.125rem;
 
     ${media.medium} {
@@ -25,10 +24,6 @@ const TypographyBlock = styled.div`
     font-size: 1rem;
     line-height: 1.6rem;
     letter-spacing: -0.055rem;
-    /* padding-bottom: 30px;
-    ${media.small} {
-      padding-bottom: 0;
-    } */
   }
   h1 + p {
     font-size: 1.125rem;
