@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { useScroll } from "../ScrollContext";
 import MainTemplate from "../component/main/MainTemplate";
 import MainSideBar from "../component/main/MainSideBar";
-import MainProjectContainer from "../container/main/MainProjectContainer";
+import MainWorkContainer from "../container/main/MainWorkContainer";
 
 function MainPage() {
   // set scroll Y position
@@ -23,7 +23,7 @@ function MainPage() {
         <MainSideBar />
       </MainTemplate.Left>
       <MainTemplate.Right>
-        <MainProjectContainer />
+        <MainWorkContainer />
       </MainTemplate.Right>
     </MainTemplate>
   );

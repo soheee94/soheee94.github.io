@@ -91,7 +91,7 @@ const RightBlock = styled.div`
   position: relative;
   transition: all 0.3s 0s ease;
   transition-delay: 0.15s;
-  background: black;
+  background: #fafafa;
 
   & > div {
     padding: 10px;

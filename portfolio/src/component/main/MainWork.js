@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import media from "../../utils/media";
-import sample from "../../asset/sample.jpg";
 import { useHistory } from "react-router-dom";
 import palette from "../../utils/palette";
 
@@ -19,11 +18,11 @@ const Block = styled.div`
 
 const InsideBlock = styled.div`
   margin: 10px;
-  /* background-image : url(${sample}); */
+  background-image: url(${props => props.image});
   background-blend-mode: saturation;
   background-position: center;
   background-size: cover;
-  background : white;
+  /* background: white; */
   position: absolute;
   top: 0;
   left: 0;
@@ -41,7 +40,7 @@ const InsideBlock = styled.div`
   p {
     transition: all 0.25s ease-in-out;
   }
-  h2{
+  h2 {
     margin-bottom: 8px;
   }
   &:hover {
@@ -50,18 +49,17 @@ const InsideBlock = styled.div`
       color: ${palette.point};
     }
   }
-
 `;
-function MainProject({ title, description }) {
+function MainWork({ title, summary, image }) {
   const history = useHistory();
   return (
     <Block onClick={() => history.push(`/work/${title}`)}>
-      <InsideBlock>
+      <InsideBlock image={image}>
         <h2>{title}</h2>
-        <p>{description}</p>
+        <p>{summary}</p>
       </InsideBlock>
     </Block>
   );
 }
 
-export default React.memo(MainProject);
+export default React.memo(MainWork);

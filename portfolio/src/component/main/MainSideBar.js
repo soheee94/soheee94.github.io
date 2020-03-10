@@ -12,12 +12,9 @@ function MainSideBar() {
       </FloatingLogo>
       <Introduce>
         <h1>
-          LuLuLa
+          WEB Front-End
           <br />
-          LuLuLa
-          {/* WEB Front-End
-          <br />
-          개발자 한소희 입니다. */}
+          개발자 한소희 입니다.
         </h1>
         <p>
           다른 사람에게 부끄럽지 않은
@@ -66,7 +63,7 @@ const FloatingLogo = styled.div`
 const Introduce = styled.div`
   color: ${palette.point};
   margin-bottom: 4rem;
-  margin-left: -2rem;
+
   ${ScrollAnimationStyles}
 
   ${media.medium} {
