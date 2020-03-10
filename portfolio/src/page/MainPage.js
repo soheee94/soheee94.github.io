@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useScroll } from "../ScrollContext";
-import MainTemplate from "../component/main/MainTemplate";
 import MainSideBar from "../component/main/MainSideBar";
 import MainWorkContainer from "../container/main/MainWorkContainer";
+import PageTemplate from "../component/common/PageTemplate";
 
 function MainPage() {
   // set scroll Y position
@@ -17,14 +17,14 @@ function MainPage() {
   }, [setScrollY]);
 
   return (
-    <MainTemplate>
-      <MainTemplate.Left>
+    <PageTemplate>
+      <PageTemplate.Left>
         <MainSideBar />
-      </MainTemplate.Left>
-      <MainTemplate.Right>
+      </PageTemplate.Left>
+      <PageTemplate.Right>
         <MainWorkContainer />
-      </MainTemplate.Right>
-    </MainTemplate>
+      </PageTemplate.Right>
+    </PageTemplate>
   );
 }
 

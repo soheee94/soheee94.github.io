@@ -4,7 +4,7 @@ import { useScroll, useHeader } from "../../ScrollContext";
 import media from "../../utils/media";
 import palette from "../../utils/palette";
 
-const MainTemplateBlock = styled.div`
+const PageTemplateBlock = styled.div`
   ${props => {
     if (props.scrollY > 3 && !props.openHeader) {
       return css`
@@ -37,13 +37,13 @@ const MainTemplateBlock = styled.div`
   }}
 `;
 
-function MainTemplate({ children }) {
+function PageTemplate({ children }) {
   const { scrollY } = useScroll();
   const { openHeader } = useHeader();
   return (
-    <MainTemplateBlock scrollY={scrollY} openHeader={openHeader}>
+    <PageTemplateBlock scrollY={scrollY} openHeader={openHeader}>
       {children}
-    </MainTemplateBlock>
+    </PageTemplateBlock>
   );
 }
 
@@ -105,14 +105,10 @@ const RightBlock = styled.div`
 `;
 
 const Right = function({ children }) {
-  return (
-    <RightBlock>
-      <div>{children}</div>
-    </RightBlock>
-  );
+  return <RightBlock>{children}</RightBlock>;
 };
 
-MainTemplate.Right = Right;
-MainTemplate.Left = Left;
+PageTemplate.Right = Right;
+PageTemplate.Left = Left;
 
-export default MainTemplate;
+export default PageTemplate;
