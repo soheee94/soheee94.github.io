@@ -1,11 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import media from "./utils/media";
 
 const TypographyBlock = styled.div`
   h1 {
     font-size: 2rem;
     line-height: 2.91rem;
     letter-spacing: -0.065rem;
+    margin: 0;
+    margin-bottom: 1.125rem;
+
+    ${media.medium} {
+      font-size: 1.6875rem;
+      line-height: 2.5rem;
+    }
   }
   h2 {
     font-size: 1.125rem;
@@ -21,7 +29,8 @@ const TypographyBlock = styled.div`
   p {
     font-size: 0.875rem;
     line-height: 2.25rem;
-    letter-spacing: -0.055rem;
+    letter-spacing: -0.085rem;
+    padding-bottom: 20px;
   }
 `;
 

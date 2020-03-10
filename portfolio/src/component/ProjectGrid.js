@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 import Project from "./Project";
 import media from "../utils/media";
@@ -16,10 +16,13 @@ const FullGrid = styled.div`
     props.scrollY > 3 &&
     !props.openHeader &&
     css`
-      padding-left: 132px;
+      padding-left: calc(6rem + 48px);
+      ${media.medium} {
+        padding-left: calc(4rem + 48px);
+      }
     `}
 
-  ${media.medium} {
+  ${media.small} {
     padding: 0;
   }
 `;
@@ -41,10 +44,7 @@ function ProjectGrid() {
         <Project title="MEDISIUM" description="나는야 테스트 설명" />
         <Project title="License Key Manager" description="나는야 테스트 설명" />
         <Project title="FIT-CHECKER" description="나는야 테스트 설명" />
-        <Project
-          title="POM-CHECKER Landing Page"
-          description="나는야 테스트 설명"
-        />
+        <Project title="POM-CHECKER Landing Page" description="나는야 테스트 설명" />
       </GridBlock>
     </FullGrid>
   );

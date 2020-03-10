@@ -1,8 +1,8 @@
-import React, { useState, useLayoutEffect } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 import { useScroll, useHeader } from "../ScrollContext";
 import media from "../utils/media";
-import Menu from "./Menu";
+// import Menu from "./Menu";
 import logo from "../asset/logo.png";
 
 const ScrollAnimationStyles = css`
@@ -26,17 +26,14 @@ const Block = styled.header`
   align-items: center;
   justify-content: center;
   z-index: 2;
-  ${media.medium} {
-    align-items: flex-start;
-    width: 100%;
-    position: relative;
-    padding: 0;
-  }
 
   ${props => {
     if (props.scrollY > 3 && !props.openHeader) {
       return css`
-        width: 132px;
+        width: calc(6rem + 48px);
+        ${media.medium} {
+          width: calc(4rem + 48px);
+        }
         ${HeaderContent} {
           visibility: hidden;
           opacity: 0;
@@ -45,11 +42,12 @@ const Block = styled.header`
       `;
     }
   }}
-  & > * {
-    padding: 3rem;
-    ${media.small} {
-      padding: 25px 20px;
-    }
+
+  ${media.small} {
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    padding: 0;
   }
 `;
 const FloatingBlock = styled.div`
@@ -61,6 +59,13 @@ const FloatingBlock = styled.div`
   position: fixed;
   background: inherit;
   top: 0;
+  padding: 3rem;
+  ${media.medium} {
+    padding: 2rem;
+  }
+  ${media.small} {
+      padding: 25px 20px;
+    }
   /* ${props =>
     props.openMenu &&
     css`
@@ -75,23 +80,16 @@ const Logo = styled.div`
 `;
 
 const HeaderContent = styled.div`
-  padding: 0 30px;
+  padding: 0  2rem;
  
   ${ScrollAnimationStyles}
   color : ${props => props.theme.point};
-  &>* {
-    padding: 0 20px;
-  }
 
-
-  ${media.medium} {
-    padding-top: 150px;
-    padding-bottom: 60px;
-  }
   ${media.small} {
-    padding-top: 80px;
-    /* padding-bottom: 60px; */
+    padding-top: 98px;
+    padding-bottom: 25px;
   }
+
 `;
 
 function Header() {

@@ -10,7 +10,7 @@ const Block = styled.div`
   padding-top: 55%;
   position: relative;
 
-  ${media.medium} {
+  ${media.small} {
     width: 100%;
     padding-top: 110%;
   }
