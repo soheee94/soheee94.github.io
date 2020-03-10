@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-// import Header from "../component/Header";
-// import ProjectGrid from "../component/ProjectGrid";
 import { useScroll } from "../ScrollContext";
 import MainTemplate from "../component/main/MainTemplate";
 import MainSideBar from "../component/main/MainSideBar";

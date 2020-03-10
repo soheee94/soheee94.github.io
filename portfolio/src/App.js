@@ -3,7 +3,7 @@ import { ScrollProvider } from "./ScrollContext";
 import Typography from "./Typography";
 import { Switch, Route } from "react-router-dom";
 import MainPage from "./page/MainPage";
-import Work from "./page/Work";
+import WorkPage from "./page/WorkPage";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           )}
           exact
         />
-        <Route path="/work/:title" component={Work} />
+        <Route path="/work/:title" component={WorkPage} />
         <Route
           render={({ location }) => (
             <div>
