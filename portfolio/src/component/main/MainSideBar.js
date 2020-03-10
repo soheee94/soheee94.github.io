@@ -64,7 +64,7 @@ const FloatingLogo = styled.div`
 
 const Introduce = styled.div`
   color: ${palette.point};
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 
   ${ScrollAnimationStyles}
 

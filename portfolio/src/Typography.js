@@ -16,12 +16,12 @@ const TypographyBlock = styled.div`
     }
   }
   h2 {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     line-height: 1.625rem;
     letter-spacing: -0.035rem;
     font-weight: 700;
   }
-  h1 + p {
+  p {
     font-size: 1rem;
     line-height: 1.6rem;
     letter-spacing: -0.055rem;
@@ -30,11 +30,11 @@ const TypographyBlock = styled.div`
       padding-bottom: 0;
     } */
   }
-  p {
+  /* p {
     font-size: 0.875rem;
     line-height: 2.25rem;
     letter-spacing: -0.085rem;
-  }
+  } */
 `;
 
 function Typography({ children }) {
