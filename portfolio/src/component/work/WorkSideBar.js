@@ -13,6 +13,10 @@ function WorkSideBar({ work, workTotalCount, prevWorkTitle, nextWorkTitle }) {
     <>
       <FloatingLogo />
       <SideBarContent>
+        <WorkTitle>
+          <h1>{title}</h1>
+          <h4>{period}</h4>
+        </WorkTitle>
         <Navigation>
           <NavButton onClick={() => history.push(`/work/${prevWorkTitle}`)}>
             <MdKeyboardArrowLeft />
@@ -24,10 +28,6 @@ function WorkSideBar({ work, workTotalCount, prevWorkTitle, nextWorkTitle }) {
             <MdKeyboardArrowRight />
           </NavButton>
         </Navigation>
-        <WorkTitle>
-          <h1>{title}</h1>
-          <h4>{period}</h4>
-        </WorkTitle>
       </SideBarContent>
     </>
   );
@@ -44,7 +44,7 @@ const WorkTitle = styled.div`
 `;
 
 const Navigation = styled.div`
-  margin-bottom: 1rem;
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   h4 {
