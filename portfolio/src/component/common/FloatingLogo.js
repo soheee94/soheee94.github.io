@@ -35,4 +35,4 @@ const FloatingLogoBlock = styled.div`
   }
 `;
 
-export default FloatingLogo;
+export default React.memo(FloatingLogo);
