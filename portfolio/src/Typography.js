@@ -19,16 +19,26 @@ const TypographyBlock = styled.div`
     line-height: 1.625rem;
     letter-spacing: -0.035rem;
     font-weight: 700;
+    ${media.medium} {
+      font-size: 1.25rem;
+    }
   }
   p {
     font-size: 1rem;
     line-height: 1.6rem;
     letter-spacing: -0.055rem;
+    ${media.medium} {
+      font-size: 0.875rem;
+    }
   }
   h1 + p {
     font-size: 1.125rem;
     line-height: 1.75rem;
     letter-spacing: -0.055rem;
+    ${media.medium} {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
   }
 `;
 
