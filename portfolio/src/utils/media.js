@@ -7,7 +7,7 @@ const media = {
   xlarge: mediaQuery(1440),
   large: mediaQuery(1200),
   medium: mediaQuery(1024),
-  small: mediaQuery(768),
+  small: mediaQuery(960), //768
   xsmall: mediaQuery(375),
   custom: mediaQuery
 };

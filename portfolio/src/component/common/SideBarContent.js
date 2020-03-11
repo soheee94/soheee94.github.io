@@ -18,6 +18,7 @@ const SideBarContentBlock = styled.div`
   color: ${palette.point};
   margin-bottom: 2rem;
   margin-left: -0.5rem;
+  /* max-width: 250px; */
   ${ScrollAnimationStyles}
 
   ${media.medium} {
@@ -28,6 +29,7 @@ const SideBarContentBlock = styled.div`
     padding-top: 98px;
     padding-bottom: 40px;
     width: 100%;
+    max-width: 100%;
   }
 `;
 
