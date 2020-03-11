@@ -6,6 +6,7 @@ import SideBarContent from "../common/SideBarContent";
 import data from "../../data";
 import palette from "../../utils/palette";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import { useHistory } from "react-router-dom";
 
 const WorkSideBar = withRouter(({ match }) => {
   const { title } = match.params;
@@ -14,18 +15,22 @@ const WorkSideBar = withRouter(({ match }) => {
   const work = workList.filter(work => work.title === title);
   const { period } = work[0].details;
   const { idx } = work[0];
+  const history = useHistory();
+  const prevWorkTitle = idx > 1 && workList.filter(work => work.idx === idx - 1)[0].title;
+  const nextWorkTitle =
+    idx < workTotalCount && workList.filter(work => work.idx === idx + 1)[0].title;
   return (
     <>
       <FloatingLogo />
       <SideBarContent>
         <Navigation>
-          <NavButton>
+          <NavButton onClick={() => history.push(`/work/${prevWorkTitle}`)}>
             <MdKeyboardArrowLeft />
           </NavButton>
           <h4>
             {idx} / {workTotalCount}
           </h4>
-          <NavButton>
+          <NavButton onClick={() => history.push(`/work/${nextWorkTitle}`)}>
             <MdKeyboardArrowRight />
           </NavButton>
         </Navigation>
