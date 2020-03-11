@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import media, { mediaQuery } from "../../utils/media";
+import { mediaQuery } from "../../utils/media";
 import { useHistory } from "react-router-dom";
 import palette from "../../utils/palette";
 

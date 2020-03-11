@@ -5,7 +5,7 @@ import data from "../../data";
 function MainWorkContainer() {
   const workList = data.Works;
   return (
-    <div>
+    <div className="main-work-container">
       {workList.map(({ title, introduction, image }, index) => (
         <MainWork
           title={title}

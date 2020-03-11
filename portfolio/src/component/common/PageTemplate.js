@@ -104,6 +104,9 @@ const RightBlock = styled.div`
 
   & > div {
     padding: 10px;
+  }
+
+  .main-work-container {
     display: flex;
     flex-wrap: wrap;
   }
