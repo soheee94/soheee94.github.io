@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled, { css } from "styled-components";
 import { useScroll, useHeader } from "../../ScrollContext";
 import media from "../../utils/media";
@@ -38,8 +38,17 @@ const PageTemplateBlock = styled.div`
 `;
 
 function PageTemplate({ children }) {
-  const { scrollY } = useScroll();
+  const { scrollY, setScrollY } = useScroll();
   const { openHeader } = useHeader();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [setScrollY]);
+
   return (
     <PageTemplateBlock scrollY={scrollY} openHeader={openHeader}>
       {children}
