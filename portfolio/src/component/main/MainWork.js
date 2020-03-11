@@ -50,13 +50,13 @@ const InsideBlock = styled.div`
     }
   }
 `;
-function MainWork({ title, summary, image }) {
+function MainWork({ title, introduction, image }) {
   const history = useHistory();
   return (
     <Block onClick={() => history.push(`/work/${title}`)}>
       <InsideBlock image={image}>
         <h2>{title}</h2>
-        <p>{summary}</p>
+        <p>{introduction.title}</p>
       </InsideBlock>
     </Block>
   );
