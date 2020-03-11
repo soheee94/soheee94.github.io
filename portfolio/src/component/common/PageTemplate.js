@@ -102,11 +102,15 @@ const RightBlock = styled.div`
   transition-delay: 0.15s;
   background: #fafafa;
 
-  & > div {
-    padding: 10px;
+  .work-detail {
+    padding: 3rem;
+    ${media.medium} {
+      padding: 2rem;
+    }
   }
 
   .main-work-container {
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
   }
