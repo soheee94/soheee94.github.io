@@ -1,24 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import FloatingLogo from "../common/FloatingLogo";
-import { withRouter } from "react-router-dom";
 import SideBarContent from "../common/SideBarContent";
-import data from "../../data";
 import palette from "../../utils/palette";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { useHistory } from "react-router-dom";
 
-const WorkSideBar = withRouter(({ match }) => {
-  const { title } = match.params;
-  const workList = data.Works;
-  const workTotalCount = Object.keys(workList).length;
-  const work = workList.filter(work => work.title === title);
-  const { period } = work[0].details;
-  const { idx } = work[0];
+function WorkSideBar({ work, workTotalCount, prevWorkTitle, nextWorkTitle }) {
+  const { idx, title, period } = work;
   const history = useHistory();
-  const prevWorkTitle = idx > 1 && workList.filter(work => work.idx === idx - 1)[0].title;
-  const nextWorkTitle =
-    idx < workTotalCount && workList.filter(work => work.idx === idx + 1)[0].title;
   return (
     <>
       <FloatingLogo />
@@ -41,7 +31,7 @@ const WorkSideBar = withRouter(({ match }) => {
       </SideBarContent>
     </>
   );
-});
+}
 
 const WorkTitle = styled.div`
   min-width: 250px;

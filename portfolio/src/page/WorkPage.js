@@ -1,14 +1,15 @@
 import React from "react";
 import PageTemplate from "../component/common/PageTemplate";
 import WorkSideBar from "../component/work/WorkSideBar";
+import WorkSideBarContainer from "../container/work/WorkSideBarContainer";
 
 function WorkPage() {
   return (
     <PageTemplate>
       <PageTemplate.Left>
-        <WorkSideBar />
+        <WorkSideBarContainer />
       </PageTemplate.Left>
-      <PageTemplate.Right></PageTemplate.Right>
+      <PageTemplate.Right>{/* WorkDetail */}</PageTemplate.Right>
     </PageTemplate>
   );
 }
