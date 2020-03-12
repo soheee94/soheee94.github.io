@@ -20,7 +20,10 @@ function WorkSideBar({ work, workTotalCount, prevWorkTitle, nextWorkTitle }) {
           <h4>{period}</h4>
         </WorkTitle>
         <Navigation>
-          <RoundButton disabled={idx === 1} onClick={() => history.push(`/work/${prevWorkTitle}`)}>
+          <RoundButton
+            disabled={idx === 1}
+            onClick={() => history.push(`/work/${prevWorkTitle}`)}
+          >
             <MdKeyboardArrowLeft />
           </RoundButton>
           <h4>
@@ -48,7 +51,7 @@ const WorkSideBarContent = styled(SideBarContent)`
 const WorkTitle = styled.div`
   h1 {
     margin-bottom: 0.5rem;
-    line-height: 2.25rem;
+    line-height: 2rem;
   }
   h4 {
     color: ${palette.sub};

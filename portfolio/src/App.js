@@ -1,13 +1,14 @@
 import React from "react";
 import { ScrollProvider } from "./ScrollContext";
-import Typography from "./Typography";
 import { Switch, Route } from "react-router-dom";
 import MainPage from "./page/MainPage";
 import WorkPage from "./page/WorkPage";
+import GlobalStyle from "./GlobalStyle";
 
 function App() {
   return (
-    <Typography>
+    <>
+      <GlobalStyle />
       <Switch>
         <Route
           path="/"
@@ -35,7 +36,7 @@ function App() {
           )}
         />
       </Switch>
-    </Typography>
+    </>
   );
 }
 

@@ -24,7 +24,9 @@ function FloatingLogo() {
           <IoLogoGithub />
           <span>Github</span>
         </div>
-        <div onClick={() => (window.location.href = "mailto:hsh8616@naver.com")}>
+        <div
+          onClick={() => (window.location.href = "mailto:hsh8616@naver.com")}
+        >
           <IoIosMail />
           <span>Mail</span>
         </div>
@@ -100,7 +102,7 @@ const FloatingLogoBlock = styled.div`
 
       span {
         font-size: 0.875rem;
-        letter-spacing: -0.03rem;
+        letter-spacing: -0.025rem;
       }
     }
   }
