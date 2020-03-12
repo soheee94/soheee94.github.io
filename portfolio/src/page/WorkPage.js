@@ -1,7 +1,7 @@
 import React from "react";
 import PageTemplate from "../component/common/PageTemplate";
 import WorkSideBarContainer from "../container/work/WorkSideBarContainer";
-import WorkDetail from "../component/work/WorkDetail";
+import WorkDetailContainer from "../container/work/WorkDetailContainer";
 
 function WorkPage() {
   return (
@@ -10,7 +10,7 @@ function WorkPage() {
         <WorkSideBarContainer />
       </PageTemplate.Left>
       <PageTemplate.Right>
-        <WorkDetail />
+        <WorkDetailContainer />
       </PageTemplate.Right>
     </PageTemplate>
   );
