@@ -11,7 +11,7 @@ function App() {
       <GlobalStyle />
       <Switch>
         <Route
-          path="/Portfolio"
+          path="/"
           component={() => (
             <ScrollProvider>
               <MainPage />
