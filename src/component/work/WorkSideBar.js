@@ -46,6 +46,9 @@ const WorkSideBarContent = styled(SideBarContent)`
   ${media.xlarge} {
     width: calc(100% - 8rem);
   }
+  ${media.medium} {
+    width: 100%;
+  }
 `;
 
 const WorkTitle = styled.div`
