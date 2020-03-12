@@ -5,6 +5,7 @@ import SideBarContent from "../common/SideBarContent";
 import palette from "../../utils/palette";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { useHistory } from "react-router-dom";
+import media from "../../utils/media";
 
 function WorkSideBar({ work, workTotalCount, prevWorkTitle, nextWorkTitle }) {
   const { idx, title, period } = work;
@@ -12,7 +13,7 @@ function WorkSideBar({ work, workTotalCount, prevWorkTitle, nextWorkTitle }) {
   return (
     <>
       <FloatingLogo />
-      <SideBarContent>
+      <WorkSideBarContent>
         <WorkTitle>
           <h1>{title}</h1>
           <h4>{period}</h4>
@@ -28,15 +29,22 @@ function WorkSideBar({ work, workTotalCount, prevWorkTitle, nextWorkTitle }) {
             <MdKeyboardArrowRight />
           </NavButton>
         </Navigation>
-      </SideBarContent>
+      </WorkSideBarContent>
     </>
   );
 }
 
+const WorkSideBarContent = styled(SideBarContent)`
+  width: calc(100% - 10rem);
+  ${media.medium} {
+    width: calc(100% - 6rem);
+  }
+`;
+
 const WorkTitle = styled.div`
-  min-width: 250px;
   h1 {
-    margin-bottom: 0;
+    margin-bottom: 0.25rem;
+    line-height: 2.25rem;
   }
   h4 {
     color: ${palette.sub};
