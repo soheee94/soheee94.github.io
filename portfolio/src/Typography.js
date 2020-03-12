@@ -9,7 +9,7 @@ const TypographyBlock = styled.div`
     letter-spacing: -0.065rem;
     margin-bottom: 1.125rem;
 
-    ${media.large} {
+    ${media.xlarge} {
       font-size: 1.6875rem;
       line-height: 2.5rem;
     }
@@ -19,7 +19,7 @@ const TypographyBlock = styled.div`
     line-height: 1.625rem;
     letter-spacing: -0.035rem;
     font-weight: 700;
-    ${media.large} {
+    ${media.xlarge} {
       font-size: 1.25rem;
     }
   }
@@ -27,7 +27,7 @@ const TypographyBlock = styled.div`
     font-size: 1rem;
     line-height: 1.6rem;
     letter-spacing: -0.055rem;
-    ${media.large} {
+    ${media.xlarge} {
       font-size: 0.875rem;
     }
   }
@@ -35,7 +35,7 @@ const TypographyBlock = styled.div`
     font-size: 1.125rem;
     line-height: 1.75rem;
     letter-spacing: -0.055rem;
-    ${media.large} {
+    ${media.xlarge} {
       font-size: 1rem;
       line-height: 1.5rem;
     }

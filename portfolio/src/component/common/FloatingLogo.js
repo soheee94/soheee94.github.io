@@ -4,6 +4,7 @@ import media from "../../utils/media";
 import logo from "../../asset/logo.png";
 import logo_hover from "../../asset/logo_hover.png";
 import { useHistory } from "react-router-dom";
+import spacing from "../../utils/spacing";
 
 function FloatingLogo() {
   const history = useHistory();
@@ -30,10 +31,10 @@ const FloatingLogoBlock = styled.div`
   left: 0;
   padding: 3rem;
 
-  ${media.medium} {
+  ${media.xlarge} {
     padding: 2rem;
   }
-  ${media.small} {
+  ${media.medium} {
     padding: 25px 2rem;
   }
 

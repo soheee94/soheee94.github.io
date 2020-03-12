@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { mediaQuery } from "../../utils/media";
+import media from "../../utils/media";
 import { useHistory } from "react-router-dom";
 import palette from "../../utils/palette";
 
@@ -10,7 +10,7 @@ const Block = styled.div`
   padding-top: 50%;
   position: relative;
 
-  ${mediaQuery(768)} {
+  ${media.small} {
     width: 100%;
     padding-top: 90%;
   }

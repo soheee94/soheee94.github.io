@@ -28,7 +28,7 @@ const Block = styled.div`
     &:nth-of-type(2) {
       margin-top: 1rem;
     }
-    ${media.small} {
+    ${media.medium} {
       display: block;
     }
   }
@@ -52,7 +52,7 @@ const Title = styled.div`
 const DescriptionList = styled.ul`
   list-style: none;
   color: ${palette.sub};
-  ${media.small} {
+  ${media.medium} {
     padding-left: 1rem;
   }
 `;

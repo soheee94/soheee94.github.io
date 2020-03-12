@@ -39,8 +39,8 @@ function WorkSideBar({ work, workTotalCount, prevWorkTitle, nextWorkTitle }) {
 
 const WorkSideBarContent = styled(SideBarContent)`
   width: calc(100% - 10rem);
-  ${media.medium} {
-    width: calc(100% - 6rem);
+  ${media.xlarge} {
+    width: calc(100% - 8rem);
   }
 `;
 

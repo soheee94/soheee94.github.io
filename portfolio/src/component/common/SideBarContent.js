@@ -17,17 +17,18 @@ const ScrollAnimationStyles = css`
 const SideBarContentBlock = styled.div`
   color: ${palette.point};
   margin-bottom: 2rem;
-  margin-left: -2rem;
+  margin-left: -1rem;
 
   ${ScrollAnimationStyles}
 
-  ${media.medium} {
+  ${media.xlarge} {
     margin: 0;
   }
-  ${media.small} {
+  ${media.medium} {
     padding: 105px 2rem 40px 2rem;
     width: 100%;
     max-width: 100%;
+    margin-bottom: 0;
   }
 `;
 

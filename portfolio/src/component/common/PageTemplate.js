@@ -10,10 +10,10 @@ const PageTemplateBlock = styled.div`
       return css`
         ${LeftBlock} {
           width: calc(6rem + 48px);
-          ${media.medium} {
+          ${media.xlarge} {
             width: calc(4rem + 48px);
           }
-          ${media.small} {
+          ${media.medium} {
             width: 100%;
           }
           & > div:last-of-type {
@@ -25,10 +25,10 @@ const PageTemplateBlock = styled.div`
 
         ${RightBlock} {
           padding-left: calc(6rem + 48px);
-          ${media.medium} {
+          ${media.xlarge} {
             padding-left: calc(4rem + 48px);
           }
-          ${media.small} {
+          ${media.medium} {
             padding: 0;
           }
         }
@@ -70,7 +70,7 @@ const LeftBlock = styled.div`
   justify-content: center;
   z-index: 2;
 
-  ${media.small} {
+  ${media.medium} {
     justify-content: flex-start;
     width: 100%;
     position: relative;
@@ -104,7 +104,7 @@ const RightBlock = styled.div`
 
   .work-detail {
     padding: 3rem;
-    ${media.medium} {
+    ${media.xlarge} {
       padding: 2rem;
     }
   }
@@ -115,7 +115,7 @@ const RightBlock = styled.div`
     flex-wrap: wrap;
   }
 
-  ${media.small} {
+  ${media.medium} {
     padding: 0;
   }
 `;
