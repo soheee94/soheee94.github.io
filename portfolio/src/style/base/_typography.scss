@@ -1,2 +1,16 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+// @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap");
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/NotoSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/NotoSans-Bold.woff2") format("woff2");
+}
