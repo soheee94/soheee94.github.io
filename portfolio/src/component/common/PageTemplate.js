@@ -10,16 +10,22 @@ const PageTemplateBlock = styled.div`
       return css`
         ${LeftBlock} {
           width: calc(6rem + 48px);
+          & > div:last-of-type,
+          .icons {
+            visibility: hidden;
+            opacity: 0;
+            transition-delay: 0s;
+          }
           ${media.xlarge} {
             width: calc(4rem + 48px);
           }
           ${media.medium} {
             width: 100%;
-          }
-          & > div:last-of-type {
-            visibility: hidden;
-            opacity: 0;
-            transition-delay: 0s;
+            .icons {
+              visibility: visible;
+              opacity: 1;
+              /* transition-delay: 0s; */
+            }
           }
         }
 
