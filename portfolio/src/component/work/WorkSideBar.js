@@ -43,7 +43,7 @@ const WorkSideBarContent = styled(SideBarContent)`
 
 const WorkTitle = styled.div`
   h1 {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
     line-height: 2.25rem;
   }
   h4 {
