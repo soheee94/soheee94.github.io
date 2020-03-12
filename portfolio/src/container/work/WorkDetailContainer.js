@@ -11,7 +11,7 @@ const WorkDetailContainer = withRouter(({ match }) => {
 
   return (
     <div className="work-detail">
-      <img src={image} alt="work" height="30%" />
+      <img src={image} alt="work" height="30%" width="100%" />
       <WorkDetail category="01. 소개" data={introduction} />
       <WorkDetail category="02. 담당업무" data={assignedTasks} />
       <WorkDetail category="03. 환경 및 성과" data={toolOutcome} />

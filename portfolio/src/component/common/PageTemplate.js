@@ -3,8 +3,12 @@ import styled, { css } from "styled-components";
 import { useScroll, useHeader } from "../../ScrollContext";
 import media from "../../utils/media";
 import palette from "../../utils/palette";
+import RoundButton from "./RoundButton";
+import { IoMdArrowRoundUp } from "react-icons/io";
+import { animateScroll as scroll } from "react-scroll";
 
 const PageTemplateBlock = styled.div`
+  position: relative;
   ${props => {
     if (props.scrollY > 3 && !props.openHeader) {
       return css`
@@ -21,10 +25,10 @@ const PageTemplateBlock = styled.div`
           }
           ${media.medium} {
             width: 100%;
+            & > div:last-of-type,
             .icons {
               visibility: visible;
               opacity: 1;
-              /* transition-delay: 0s; */
             }
           }
         }
@@ -43,6 +47,15 @@ const PageTemplateBlock = styled.div`
   }}
 `;
 
+const ScrollTopButton = styled(RoundButton)`
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: white;
+  width: 2rem;
+  height: 2rem;
+`;
+
 function PageTemplate({ children }) {
   const { scrollY, setScrollY } = useScroll();
   const { openHeader } = useHeader();
@@ -58,6 +71,11 @@ function PageTemplate({ children }) {
   return (
     <PageTemplateBlock scrollY={scrollY} openHeader={openHeader}>
       {children}
+      {scrollY > 3 && (
+        <ScrollTopButton onClick={() => scroll.scrollToTop({ duration: 500 })}>
+          <IoMdArrowRoundUp />
+        </ScrollTopButton>
+      )}
     </PageTemplateBlock>
   );
 }

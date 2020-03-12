@@ -4,8 +4,6 @@ import media from "../../utils/media";
 import logo from "../../asset/logo.png";
 import logo_hover from "../../asset/logo_hover.png";
 import { useHistory } from "react-router-dom";
-import { GoMarkGithub, GoMail } from "react-icons/go";
-import { DiGithubBadge } from "react-icons/di";
 import palette from "../../utils/palette";
 import { IoIosMail, IoLogoGithub } from "react-icons/io";
 
