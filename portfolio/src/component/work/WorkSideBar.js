@@ -19,13 +19,16 @@ function WorkSideBar({ work, workTotalCount, prevWorkTitle, nextWorkTitle }) {
           <h4>{period}</h4>
         </WorkTitle>
         <Navigation>
-          <NavButton onClick={() => history.push(`/work/${prevWorkTitle}`)}>
+          <NavButton disabled={idx === 1} onClick={() => history.push(`/work/${prevWorkTitle}`)}>
             <MdKeyboardArrowLeft />
           </NavButton>
           <h4>
             {idx} / {workTotalCount}
           </h4>
-          <NavButton onClick={() => history.push(`/work/${nextWorkTitle}`)}>
+          <NavButton
+            disabled={idx === workTotalCount}
+            onClick={() => history.push(`/work/${nextWorkTitle}`)}
+          >
             <MdKeyboardArrowRight />
           </NavButton>
         </Navigation>
@@ -82,10 +85,13 @@ const NavButton = styled.button`
   &:last-of-type {
     margin-left: 0.5rem;
   }
-
   &:hover {
     background: ${palette.point};
     color: white;
+  }
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.6;
   }
 `;
 
