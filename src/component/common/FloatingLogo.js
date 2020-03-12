@@ -15,7 +15,7 @@ function FloatingLogo() {
       <img
         src={imageSrc}
         alt="logo"
-        onClick={() => history.push(`/`)}
+        onClick={() => history.push(`/Portfolio`)}
         onMouseOver={() => setImageSrc(logo_hover)}
         onMouseLeave={() => setImageSrc(logo)}
       />
