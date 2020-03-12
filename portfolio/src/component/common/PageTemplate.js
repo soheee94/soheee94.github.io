@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import styled, { css } from "styled-components";
 import { useScroll, useHeader } from "../../ScrollContext";
-import media from "../../utils/media";
-import palette from "../../utils/palette";
+import media from "../../lib/style/media";
+import palette from "../../lib/style/palette";
 import RoundButton from "./RoundButton";
 import { IoMdArrowRoundUp } from "react-icons/io";
 import { animateScroll as scroll } from "react-scroll";

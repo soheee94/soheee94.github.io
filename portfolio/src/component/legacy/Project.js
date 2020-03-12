@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import media from "../utils/media";
+import media from "../lib/style/media";
 import sample from "../asset/sample.jpg";
 import { useHistory } from "react-router-dom";
 

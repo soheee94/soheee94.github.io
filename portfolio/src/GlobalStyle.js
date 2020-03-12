@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import media from "./utils/media";
+import media from "./lib/style/media";
 
 const GlobalStyle = createGlobalStyle`
   h1 {

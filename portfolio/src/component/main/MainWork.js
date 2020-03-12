@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import media from "../../utils/media";
+import media from "../../lib/style/media";
 import { useHistory } from "react-router-dom";
-import palette from "../../utils/palette";
+import palette from "../../lib/style/palette";
 
 const Block = styled.div`
   width: 50%;

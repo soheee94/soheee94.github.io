@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { useScroll, useHeader } from "../ScrollContext";
-import media from "../utils/media";
+import media from "../lib/style/media";
 // import Menu from "./Menu";
 import logo from "../asset/logo.png";
 

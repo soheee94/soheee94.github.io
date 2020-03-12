@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import Project from "./Project";
-import media from "../utils/media";
+import media from "../lib/style/media";
 import { useScroll, useHeader } from "../ScrollContext";
 
 const FullGrid = styled.div`
@@ -44,7 +44,10 @@ function ProjectGrid() {
         <Project title="MEDISIUM" description="나는야 테스트 설명" />
         <Project title="License Key Manager" description="나는야 테스트 설명" />
         <Project title="FIT-CHECKER" description="나는야 테스트 설명" />
-        <Project title="POM-CHECKER Landing Page" description="나는야 테스트 설명" />
+        <Project
+          title="POM-CHECKER Landing Page"
+          description="나는야 테스트 설명"
+        />
       </GridBlock>
     </FullGrid>
   );

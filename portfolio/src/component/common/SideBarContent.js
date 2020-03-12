@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import palette from "../../utils/palette";
-import media from "../../utils/media";
+import palette from "../../lib/style/palette";
+import media from "../../lib/style/media";
 
 function SideBarContent({ children, className }) {
   return (

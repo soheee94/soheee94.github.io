@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import media from "../utils/media";
+import media from "../lib/style/media";
 
 function transitionTimer() {
   let styles = "";

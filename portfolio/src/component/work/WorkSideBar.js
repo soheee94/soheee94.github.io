@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import FloatingLogo from "../common/FloatingLogo";
 import SideBarContent from "../common/SideBarContent";
-import palette from "../../utils/palette";
+import palette from "../../lib/style/palette";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { useHistory } from "react-router-dom";
-import media from "../../utils/media";
+import media from "../../lib/style/media";
 import RoundButton from "../common/RoundButton";
 
 function WorkSideBar({ work, workTotalCount, prevWorkTitle, nextWorkTitle }) {

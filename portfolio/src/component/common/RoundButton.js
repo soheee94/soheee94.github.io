@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import palette from "../../utils/palette";
+import palette from "../../lib/style/palette";
 
 function RoundButton({ onClick, ...rest }) {
   return <Button onClick={onClick} {...rest} />;

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import media from "../../utils/media";
+import media from "../../lib/style/media";
 import logo from "../../asset/logo.png";
 import logo_hover from "../../asset/logo_hover.png";
 import { useHistory } from "react-router-dom";
-import palette from "../../utils/palette";
+import palette from "../../lib/style/palette";
 import { IoIosMail, IoLogoGithub } from "react-icons/io";
 
 function FloatingLogo() {

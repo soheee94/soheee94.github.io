@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes, css } from "styled-components";
-import media from "../utils/media";
+import media from "../lib/style/media";
 
 const lineUp = keyframes`
   0% {
