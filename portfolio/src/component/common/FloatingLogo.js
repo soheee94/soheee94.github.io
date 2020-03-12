@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import media from "../../utils/media";
 import logo from "../../asset/logo.png";
+import logo_hover from "../../asset/logo_hover.png";
 import { useHistory } from "react-router-dom";
 
 function FloatingLogo() {
   const history = useHistory();
+  const [imageSrc, setImageSrc] = useState(logo);
   return (
     <FloatingLogoBlock>
-      <img src={logo} alt="logo" onClick={() => history.push(`/`)} />
+      <img
+        src={imageSrc}
+        alt="logo"
+        onClick={() => history.push(`/`)}
+        onMouseOver={() => setImageSrc(logo_hover)}
+        onMouseLeave={() => setImageSrc(logo)}
+      />
     </FloatingLogoBlock>
   );
 }
@@ -26,7 +34,7 @@ const FloatingLogoBlock = styled.div`
     padding: 2rem;
   }
   ${media.small} {
-    padding: 25px 20px;
+    padding: 25px 2rem;
   }
 
   img {
