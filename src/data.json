@@ -3,13 +3,14 @@
     {
       "idx": 1,
       "title": "POM-CHECKER",
-      "image": "https://i.picsum.photos/id/870/536/354.jpg?blur=2&grayscale",
+      "image": "POM-CHECKER.JPG",
       "period": "2017.09 ~ 현재 (유지보수)",
       "introduction": [
         {
           "title": "근골격 의료계의 종합 솔루션",
           "description": [
-            "실시간 영상 처리 기반으로 마커 탈 부착 없이 편리하고 정확한 관절가동범위(ROM) 및 자세(POSTURE) 평가 기기"
+            "여러 가지 진단 지표 측정 및 기록 관리를 위한 웹 프로그램",
+            "결과 및 맞춤 운동 추천 등을 포함한 약 10장의 리포트를 제공"
           ]
         }
       ],
@@ -17,18 +18,16 @@
         {
           "title": "Web Developer",
           "description": [
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현",
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현",
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현"
-          ]
-        },
-
-        {
-          "title": "Designer",
-          "description": [
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현",
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현",
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현"
+            "프론트엔드 / 백엔드 기술 환경 셋팅 및 전체 기능 구현",
+            "측정 결과 맞춤형 리포트 UI 개발",
+            "Paper.js 기반 이미지 그림판 구현",
+            "Chart.js 기반 데이터 차트 개발",
+            "MYSQL 기반 데이터베이스 설계",
+            "PHP 7.x 기반 REST API 구축",
+            "비즈엠 카카오톡 알림톡 전송 시스템 개발",
+            "Naver Cloud Platform 기반 클라우드 시스템 구축 및 개발",
+            "Blob storage 서비스 기반 플랫폼 간 미디어 파일 전송 기능 구현",
+            "AES/RSA 암호화 알고리즘 구현"
           ]
         }
       ],
@@ -37,42 +36,35 @@
           "title": "Tool & OutCome",
           "description": [
             "HTML5 / CSS3 / SASS / Javascript / PHP / MySQL / npm / webpack",
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현",
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현"
+            "병원, 한의원, 피트니스 등 60개 이상 판매",
+            "전국 총판 대리점 계약",
+            "해외 진출 준비 중"
           ]
         }
       ]
     },
     {
       "idx": 2,
-      "title": "License Key Manager",
-
-      "image": "https://i.picsum.photos/id/870/536/354.jpg?blur=2&grayscale",
-      "period": "2017.09 ~ 현재 (유지보수)",
+      "title": "MEDISIUM",
+      "image": "MEDISIUM.png",
+      "period": "2019.11 ~ 현재 (유지보수)",
       "introduction": [
         {
-          "title": "근골격 의료계의 종합 솔루션",
-          "description": [
-            "실시간 영상 처리 기반으로 마커 탈 부착 없이 편리하고 정확한 관절가동범위(ROM) 및 자세(POSTURE) 평가 기기"
-          ]
+          "title": "회사 내 의료 소프트웨어를 위한 환자 및 측정 관리 플랫폼",
+          "description": []
         }
       ],
       "assignedTasks": [
         {
           "title": "Web Developer",
           "description": [
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현",
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현",
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현"
-          ]
-        },
-
-        {
-          "title": "Designer",
-          "description": [
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현",
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현",
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현"
+            "프론트엔드 / 백엔드 기술 환경 셋팅 및 전체 기능 구현",
+            "React 기반 컴포넌트 계층 구조 디자인",
+            "환자, 병원 및 측정 관리 기능 개발",
+            "소프트웨어에 따른 테마 적용",
+            "MYSQL 기반 데이터베이스 설계",
+            "PHP 7.x 기반 REST API 구축",
+            "Axios를 통한 데이터 통신"
           ]
         }
       ],
@@ -80,10 +72,138 @@
         {
           "title": "Tool & OutCome",
           "description": [
-            "HTML5 / CSS3 / SASS / Javascript / PHP / MySQL / npm / webpack",
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현",
-            "여러 가지 진단 지표 측정 및 기록 관리를 위한 UI 구현"
+            "REACT / SASS / Axios / styled-components / react-router / PHP / MySQL"
           ]
+        }
+      ]
+    },
+    {
+      "idx": 3,
+      "title": "License Key Manager",
+      "image": "LicenseKeyManager.png",
+      "period": "2019.09 ~ 2019.10",
+      "introduction": [
+        {
+          "title": "의료 소프트웨어 라이센스 키 관리자 페이지",
+          "description": []
+        }
+      ],
+      "assignedTasks": [
+        {
+          "title": "Web Developer",
+          "description": [
+            "프론트엔드 /  백엔드 기술 환경 셋팅 및 전체 기능 구현",
+            "회원, 병원 및 라이센스 키 관리 기능 구현",
+            "DataTable.js 기반 테이블 기능 구현",
+            "MYSQL 기반 데이터베이스 설계",
+            "PHP 7.x 기반 REST API 구축"
+          ]
+        },
+
+        {
+          "title": "Designer",
+          "description": ["UI 디자인"]
+        }
+      ],
+      "toolOutcome": [
+        {
+          "title": "Tool & OutCome",
+          "description": [
+            "HTML5 /  SASS / Javascript / PHP / MySql",
+            "60개 이상 병원의 라이센스 키를 관리"
+          ]
+        }
+      ]
+    },
+    {
+      "idx": 4,
+      "title": "POM-CHECKER Landing Page",
+      "image": "https://i.picsum.photos/id/870/536/354.jpg?blur=2&grayscale",
+      "period": "2018.08",
+      "introduction": [
+        {
+          "title": "제품 랜딩 페이지",
+          "description": []
+        }
+      ],
+      "assignedTasks": [
+        {
+          "title": "Web Developer",
+          "description": [
+            "HTML 마크업 (웹 표준, 웹 접근성)",
+            "검색 엔진 최적화",
+            "반응형 웹 페이지 구현",
+            "UI 개발"
+          ]
+        }
+      ],
+      "toolOutcome": [
+        {
+          "title": "Tool & OutCome",
+          "description": ["HTML5 / CSS3 / SASS / Javascript"]
+        }
+      ]
+    },
+    {
+      "idx": 5,
+      "title": "TeamElysium Landing Page",
+      "image": "https://i.picsum.photos/id/870/536/354.jpg?blur=2&grayscale",
+      "period": "2018.06",
+      "introduction": [
+        {
+          "title": "(주) 팀엘리시움 회사 소개 페이지",
+          "description": []
+        }
+      ],
+      "assignedTasks": [
+        {
+          "title": "Web Developer",
+          "description": [
+            "HTML 마크업 (웹 표준, 웹 접근성)",
+            "검색 엔진 최적화",
+            "반응형 웹 페이지 구현",
+            "UI 개발",
+            "메일 전송 기능 구현",
+            "Google Maps API"
+          ]
+        }
+      ],
+      "toolOutcome": [
+        {
+          "title": "Tool & OutCome",
+          "description": ["HTML5 / CSS3 / SASS / Javascript / PHP"]
+        }
+      ]
+    },
+    {
+      "idx": 6,
+      "title": "Release Page",
+      "image": "https://i.picsum.photos/id/870/536/354.jpg?blur=2&grayscale",
+      "period": "2019.12",
+      "introduction": [
+        {
+          "title": "POM-CHECKER 버전 릴리즈 소개 페이지",
+          "description": []
+        }
+      ],
+      "assignedTasks": [
+        {
+          "title": "Web Developer",
+          "description": [
+            "React 기반 컴포넌트 계층 구조 디자인",
+            "Infinte Scroll 적용",
+            "반응형 웹페이지 구현"
+          ]
+        },
+        {
+          "title": "Designer",
+          "description": ["UI 디자인"]
+        }
+      ],
+      "toolOutcome": [
+        {
+          "title": "Tool & OutCome",
+          "description": ["React / SASS"]
         }
       ]
     }

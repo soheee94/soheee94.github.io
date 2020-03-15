@@ -18,11 +18,11 @@ const Block = styled.div`
 
 const InsideBlock = styled.div`
   margin: 10px;
-  background-image: url(${props => props.image});
+  background-image: url(${props =>
+    `http://soheee94.dothome.co.kr/image/${props.image}`});
   background-blend-mode: saturation;
   background-position: center;
   background-size: cover;
-  /* background: white; */
   position: absolute;
   top: 0;
   left: 0;

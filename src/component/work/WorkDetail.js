@@ -37,7 +37,6 @@ const Block = styled.div`
 
 const Category = styled.h4`
   color: #ffae4a;
-  text-decoration: underline;
   margin-bottom: 0.5rem;
 `;
 
