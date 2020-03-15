@@ -3,7 +3,7 @@
     {
       "idx": 1,
       "title": "POM-CHECKER",
-      "image": "POM-CHECKER.JPG",
+      "image": "pomchecker.png",
       "period": "2017.09 ~ 현재 (유지보수)",
       "introduction": [
         {
@@ -46,7 +46,7 @@
     {
       "idx": 2,
       "title": "MEDISIUM",
-      "image": "MEDISIUM.png",
+      "image": "medisium.jpeg",
       "period": "2019.11 ~ 현재 (유지보수)",
       "introduction": [
         {
@@ -79,8 +79,40 @@
     },
     {
       "idx": 3,
+      "title": "Release Page",
+      "image": "licenseKey.png",
+      "period": "2019.12",
+      "introduction": [
+        {
+          "title": "POM-CHECKER 버전 릴리즈 소개 페이지",
+          "description": []
+        }
+      ],
+      "assignedTasks": [
+        {
+          "title": "Web Developer",
+          "description": [
+            "React 기반 컴포넌트 계층 구조 디자인",
+            "Infinte Scroll 적용",
+            "반응형 웹페이지 구현"
+          ]
+        },
+        {
+          "title": "Designer",
+          "description": ["UI 디자인"]
+        }
+      ],
+      "toolOutcome": [
+        {
+          "title": "Tool & OutCome",
+          "description": ["React / SASS"]
+        }
+      ]
+    },
+    {
+      "idx": 4,
       "title": "License Key Manager",
-      "image": "LicenseKeyManager.png",
+      "image": "licenseKey.png",
       "period": "2019.09 ~ 2019.10",
       "introduction": [
         {
@@ -116,9 +148,9 @@
       ]
     },
     {
-      "idx": 4,
+      "idx": 5,
       "title": "POM-CHECKER Landing Page",
-      "image": "https://i.picsum.photos/id/870/536/354.jpg?blur=2&grayscale",
+      "image": "POM-CHECKER.jpg",
       "period": "2018.08",
       "introduction": [
         {
@@ -145,9 +177,9 @@
       ]
     },
     {
-      "idx": 5,
+      "idx": 6,
       "title": "TeamElysium Landing Page",
-      "image": "https://i.picsum.photos/id/870/536/354.jpg?blur=2&grayscale",
+      "image": "TeamelysiumLandingPage.png",
       "period": "2018.06",
       "introduction": [
         {
@@ -172,38 +204,6 @@
         {
           "title": "Tool & OutCome",
           "description": ["HTML5 / CSS3 / SASS / Javascript / PHP"]
-        }
-      ]
-    },
-    {
-      "idx": 6,
-      "title": "Release Page",
-      "image": "https://i.picsum.photos/id/870/536/354.jpg?blur=2&grayscale",
-      "period": "2019.12",
-      "introduction": [
-        {
-          "title": "POM-CHECKER 버전 릴리즈 소개 페이지",
-          "description": []
-        }
-      ],
-      "assignedTasks": [
-        {
-          "title": "Web Developer",
-          "description": [
-            "React 기반 컴포넌트 계층 구조 디자인",
-            "Infinte Scroll 적용",
-            "반응형 웹페이지 구현"
-          ]
-        },
-        {
-          "title": "Designer",
-          "description": ["UI 디자인"]
-        }
-      ],
-      "toolOutcome": [
-        {
-          "title": "Tool & OutCome",
-          "description": ["React / SASS"]
         }
       ]
     }

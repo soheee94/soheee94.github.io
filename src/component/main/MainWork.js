@@ -37,6 +37,7 @@ const InsideBlock = styled.div`
   transition: all 0.35s ease;
   border-radius: 18px;
   overflow: hidden;
+
   p {
     transition: all 0.25s ease-in-out;
   }
