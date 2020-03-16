@@ -69,13 +69,15 @@ const DescriptionList = styled.ul`
 
 const Description = styled.li`
   margin-bottom: 8px;
-  display: flex;
-  align-items: center;
   &::before {
     content: "\\2022";
     display: inline-block;
     width: 1rem;
     margin-left: -1rem;
+  }
+  span {
+    display: inline-flex;
+    align-items: center;
   }
   /* ExternalLink icon */
   svg {
@@ -86,7 +88,7 @@ const Description = styled.li`
     css`
       cursor: pointer;
       &:hover {
-        color: #796b62;
+        opacity: 0.8;
       }
     `}
 `;
