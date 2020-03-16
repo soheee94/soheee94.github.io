@@ -18,6 +18,7 @@ const Button = styled.button`
   width: 1.75rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: 1rem;
   border-radius: 0.25rem;
   font-weight: 700;

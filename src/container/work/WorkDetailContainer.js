@@ -7,10 +7,10 @@ const WorkDetailContainer = withRouter(({ match }) => {
   const { title } = match.params;
   const workList = data.Works;
   const work = workList.filter(work => work.title === title)[0];
-  const { image, introduction, assignedTasks, toolOutcome } = work;
+  const { introduction, assignedTasks, toolOutcome } = work;
 
   return (
-    <div className="work-detail">
+    <div className="work-detail-container">
       {/* <img
         src={`http://soheee94.dothome.co.kr/image/${image}`}
         alt="work"

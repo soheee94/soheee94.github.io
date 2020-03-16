@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { useScroll, useHeader } from "../../ScrollContext";
 import media from "../../lib/style/media";
 import palette from "../../lib/style/palette";
@@ -118,6 +118,15 @@ const Left = function({ children }) {
   );
 };
 
+const fadeIn = keyframes`
+    from{
+        opacity : 0
+    }
+    to{
+        opacity : 1
+    }
+`;
+
 const RightBlock = styled.div`
   width: 100%;
   padding-left: 33.33%;
@@ -125,8 +134,14 @@ const RightBlock = styled.div`
   transition: all 0.3s 0s ease;
   transition-delay: 0.15s;
   background: #fafafa;
+  & > div {
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-name: ${fadeIn};
+    animation-fill-mode: forwards;
+  }
 
-  .work-detail {
+  .work-detail-container {
     padding: 3rem;
     ${media.xlarge} {
       padding: 2rem;
