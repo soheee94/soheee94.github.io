@@ -18,7 +18,7 @@ const Block = styled.div`
 
 const InsideBlock = styled.div`
   margin: 10px;
-  background-image: url(${props => require(`../../asset/thumbnails/${props.image}`)});
+  background-image: url(${props => require(`../../asset/thumbnails/${props.thumbnail}`)});
   background-blend-mode: saturation;
   background-position: center;
   background-size: cover;
@@ -50,11 +50,11 @@ const InsideBlock = styled.div`
     }
   }
 `;
-function MainWork({ title, introduction, image }) {
+function MainWork({ title, introduction, thumbnail }) {
   const history = useHistory();
   return (
     <Block onClick={() => history.push(`/work/${title}`)}>
-      <InsideBlock image={image}>
+      <InsideBlock thumbnail={thumbnail}>
         <h2>{title}</h2>
         <p>{introduction.title}</p>
       </InsideBlock>

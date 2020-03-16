@@ -3,7 +3,7 @@
     {
       "idx": 1,
       "title": "POM-CHECKER",
-      "image": "POM-CHECKER.png",
+      "thumbnail": "POM-CHECKER.png",
       "period": "2017.09 ~ 현재 (유지보수)",
       "introduction": [
         {
@@ -46,7 +46,7 @@
     {
       "idx": 2,
       "title": "MEDISIUM",
-      "image": "MEDISIUM.png",
+      "thumbnail": "MEDISIUM.png",
       "period": "2019.11 ~ 현재 (유지보수)",
       "introduction": [
         {
@@ -78,7 +78,7 @@
     {
       "idx": 3,
       "title": "Release Page",
-      "image": "ReleasePage.png",
+      "thumbnail": "ReleasePage.png",
       "period": "2019.12",
       "introduction": [
         {
@@ -110,7 +110,7 @@
     {
       "idx": 4,
       "title": "License Key Manager",
-      "image": "LicenseKey.png",
+      "thumbnail": "LicenseKey.png",
       "period": "2019.09 ~ 2019.10",
       "introduction": [
         {
@@ -148,7 +148,7 @@
     {
       "idx": 5,
       "title": "POM-CHECKER Landing Page",
-      "image": "POM-CHECKER_LandingPage.png",
+      "thumbnail": "POM-CHECKER_LandingPage.png",
       "period": "2018.08",
       "introduction": [
         {
@@ -177,7 +177,7 @@
     {
       "idx": 6,
       "title": "TeamElysium Landing Page",
-      "image": "TeamElysium_LandingPage.png",
+      "thumbnail": "TeamElysium_LandingPage.png",
       "period": "2018.06",
       "introduction": [
         {

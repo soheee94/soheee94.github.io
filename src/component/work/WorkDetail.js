@@ -24,7 +24,7 @@ function WorkDetail({ category, data }) {
 }
 const Block = styled.div`
   & > div {
-    display: flex;
+    /* display: flex; */
     &:nth-of-type(2) {
       margin-top: 1rem;
     }
