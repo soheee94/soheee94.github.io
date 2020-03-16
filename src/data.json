@@ -3,7 +3,7 @@
     {
       "idx": 1,
       "title": "POM-CHECKER",
-      "image": "pomchecker.png",
+      "image": "POM-CHECKER.png",
       "period": "2017.09 ~ 현재 (유지보수)",
       "introduction": [
         {
@@ -46,7 +46,7 @@
     {
       "idx": 2,
       "title": "MEDISIUM",
-      "image": "medisium.jpeg",
+      "image": "MEDISIUM.png",
       "period": "2019.11 ~ 현재 (유지보수)",
       "introduction": [
         {
@@ -71,16 +71,14 @@
       "toolOutcome": [
         {
           "title": "Tool & OutCome",
-          "description": [
-            "REACT / SASS / Axios / styled-components / react-router / PHP / MySQL"
-          ]
+          "description": ["REACT / SASS / Axios / styled-components / react-router / PHP / MySQL"]
         }
       ]
     },
     {
       "idx": 3,
       "title": "Release Page",
-      "image": "licenseKey.png",
+      "image": "ReleasePage.png",
       "period": "2019.12",
       "introduction": [
         {
@@ -112,7 +110,7 @@
     {
       "idx": 4,
       "title": "License Key Manager",
-      "image": "licenseKey.png",
+      "image": "LicenseKey.png",
       "period": "2019.09 ~ 2019.10",
       "introduction": [
         {
@@ -150,7 +148,7 @@
     {
       "idx": 5,
       "title": "POM-CHECKER Landing Page",
-      "image": "POM-CHECKER.jpg",
+      "image": "POM-CHECKER_LandingPage.png",
       "period": "2018.08",
       "introduction": [
         {
@@ -179,7 +177,7 @@
     {
       "idx": 6,
       "title": "TeamElysium Landing Page",
-      "image": "TeamelysiumLandingPage.png",
+      "image": "TeamElysium_LandingPage.png",
       "period": "2018.06",
       "introduction": [
         {
