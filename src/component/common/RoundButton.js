@@ -14,11 +14,11 @@ const Button = styled.button`
   word-break: keep-all;
   cursor: pointer;
   color: ${palette.point};
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.75rem;
+  width: 1.75rem;
   display: flex;
   justify-content: center;
-  font-size: 0.875rem;
+  font-size: 1rem;
   border-radius: 0.25rem;
   font-weight: 700;
   padding: 0;
