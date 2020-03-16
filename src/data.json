@@ -41,7 +41,11 @@
             "해외 진출 준비 중"
           ]
         }
-      ]
+      ],
+      "images": {
+        "folder": "POM-CHECKER",
+        "files": ["1.png", "2.png"]
+      }
     },
     {
       "idx": 2,
@@ -73,7 +77,11 @@
           "title": "Tool & OutCome",
           "description": ["REACT / SASS / Axios / styled-components / react-router / PHP / MySQL"]
         }
-      ]
+      ],
+      "images": {
+        "folder": "MEDISIUM",
+        "files": ["1.png", "2.png"]
+      }
     },
     {
       "idx": 3,
@@ -105,7 +113,11 @@
           "title": "Tool & OutCome",
           "description": ["React / SASS"]
         }
-      ]
+      ],
+      "images": {
+        "folder": "ReleasePage",
+        "files": ["1.png"]
+      }
     },
     {
       "idx": 4,
@@ -143,7 +155,11 @@
             "60개 이상 병원의 라이센스 키를 관리"
           ]
         }
-      ]
+      ],
+      "images": {
+        "folder": "LicenseKeyManager",
+        "files": ["1.png", "2.png", "3.png"]
+      }
     },
     {
       "idx": 5,
@@ -172,7 +188,11 @@
           "title": "Tool & OutCome",
           "description": ["HTML5 / CSS3 / SASS / Javascript"]
         }
-      ]
+      ],
+      "images": {
+        "folder": "POM-CHECKER_LandingPage",
+        "files": ["1.png"]
+      }
     },
     {
       "idx": 6,
@@ -203,7 +223,11 @@
           "title": "Tool & OutCome",
           "description": ["HTML5 / CSS3 / SASS / Javascript / PHP"]
         }
-      ]
+      ],
+      "images": {
+        "folder": "TeamElysium_LadingPage",
+        "files": ["1.png"]
+      }
     }
   ]
 }

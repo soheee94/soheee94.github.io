@@ -4,48 +4,73 @@ import palette from "../../lib/style/palette";
 import media from "../../lib/style/media";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-function WorkDetail({ category, data }) {
+function WorkDetail({ category, data, image }) {
+  console.log(data);
   return (
     <Block>
       <Category>{category}</Category>
-      {data.map(({ title, description }) => (
-        <div key={title}>
-          <Title>
-            <h2>{title}</h2>
-          </Title>
-          <DescriptionList>
-            {description.map((text, index) => {
-              const isLandingPage = text.includes("홈페이지 바로가기");
-              return (
-                <Description key={index} isLandingPage={isLandingPage}>
-                  {isLandingPage ? (
-                    <span onClick={() => window.open(text.split("-")[1])}>
-                      {"홈페이지 바로가기"}
-                      <FaExternalLinkAlt />
-                    </span>
-                  ) : (
-                    text
-                  )}
-                </Description>
-              );
-            })}
-          </DescriptionList>
-        </div>
-      ))}
+      {image ? <WorkDetailImageList data={data} /> : <WorkDetailDescriptionList data={data} />}
     </Block>
   );
 }
+
+const WorkDetailDescriptionList = ({ data }) => {
+  return data.map(({ title, description }) => (
+    <div key={title}>
+      <Title>
+        <h2>{title}</h2>
+      </Title>
+      <DescriptionList>
+        {description.map((text, index) => {
+          const isLandingPage = text.includes("홈페이지 바로가기");
+          return (
+            <Description key={index} isLandingPage={isLandingPage}>
+              {isLandingPage ? (
+                <span onClick={() => window.open(text.split("-")[1])}>
+                  {"홈페이지 바로가기"}
+                  <FaExternalLinkAlt />
+                </span>
+              ) : (
+                text
+              )}
+            </Description>
+          );
+        })}
+      </DescriptionList>
+    </div>
+  ));
+};
+
+const WorkDetailImageList = ({ data }) => {
+  const { folder, files } = data;
+  return files.map(file => (
+    <img src={require(`../../asset/images/${folder}/${file}`)} alt="실행 화면 이미지" />
+  ));
+};
+
 const Block = styled.div`
   & > div {
     /* display: flex; */
     &:nth-of-type(2) {
       margin-top: 1rem;
     }
-    ${media.medium} {
-      display: block;
-    }
   }
   margin-top: 3rem;
+  &:first-of-type {
+    margin-top: 2rem;
+    ${media.medium} {
+      margin-top: 0;
+    }
+  }
+
+  /* image */
+  img {
+    width: 70%;
+    margin-bottom: 1rem;
+    ${media.medium} {
+      width: 100%;
+    }
+  }
 `;
 
 const Category = styled.h4`
@@ -92,5 +117,9 @@ const Description = styled.li`
       }
     `}
 `;
+
+WorkDetail.defaultProps = {
+  image: false
+};
 
 export default WorkDetail;
