@@ -49,11 +49,12 @@ const PageTemplateBlock = styled.div`
 
 const ScrollTopButton = styled(RoundButton)`
   position: fixed;
-  bottom: 1rem;
+  bottom: 1.5rem;
   right: 1rem;
   background: white;
-  width: 2rem;
-  height: 2rem;
+  font-size: 1.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
 `;
 
 function PageTemplate({ children }) {
