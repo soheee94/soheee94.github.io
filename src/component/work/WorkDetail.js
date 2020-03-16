@@ -1,7 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import palette from "../../lib/style/palette";
 import media from "../../lib/style/media";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 function WorkDetail({ category, data }) {
   return (
@@ -13,9 +14,21 @@ function WorkDetail({ category, data }) {
             <h2>{title}</h2>
           </Title>
           <DescriptionList>
-            {description.map((text, index) => (
-              <Description key={index}>{text}</Description>
-            ))}
+            {description.map((text, index) => {
+              const isLandingPage = text.includes("홈페이지 바로가기");
+              return (
+                <Description key={index} isLandingPage={isLandingPage}>
+                  {isLandingPage ? (
+                    <span onClick={() => window.open(text.split("-")[1])}>
+                      {"홈페이지 바로가기"}
+                      <FaExternalLinkAlt />
+                    </span>
+                  ) : (
+                    text
+                  )}
+                </Description>
+              );
+            })}
           </DescriptionList>
         </div>
       ))}
@@ -41,9 +54,9 @@ const Category = styled.h4`
 `;
 
 const Title = styled.div`
-  flex: 0 0 180px;
+  /* flex: 0 0 180px; */
   color: ${palette.point};
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   h2 {
     line-height: 2rem;
   }
@@ -51,20 +64,31 @@ const Title = styled.div`
 const DescriptionList = styled.ul`
   list-style: none;
   color: ${palette.sub};
-  ${media.medium} {
-    padding-left: 1rem;
-  }
+  padding-left: 1rem;
 `;
 
-const Description = styled.li({
-  marginBottom: "8px",
-
-  "::before": {
-    content: "'\\2022'",
-    display: "inline-block",
-    width: "1rem",
-    marginLeft: "-1rem"
+const Description = styled.li`
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  &::before {
+    content: "\\2022";
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1rem;
   }
-});
+  /* ExternalLink icon */
+  svg {
+    margin-left: 0.375rem;
+  }
+  ${props =>
+    props.isLandingPage &&
+    css`
+      cursor: pointer;
+      &:hover {
+        color: #796b62;
+      }
+    `}
+`;
 
 export default WorkDetail;
