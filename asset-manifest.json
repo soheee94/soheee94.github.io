@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fd4d617d.chunk.css",
+    "main.js": "/static/js/main.332d07c7.chunk.js",
+    "main.js.map": "/static/js/main.332d07c7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c2b20a0b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c2b20a0b.js.map",
+    "static/js/2.8ef8cdf8.chunk.js": "/static/js/2.8ef8cdf8.chunk.js",
+    "static/js/2.8ef8cdf8.chunk.js.map": "/static/js/2.8ef8cdf8.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.71ccbf9bf677ce55f1c22e43fbc9f0d5.js": "/precache-manifest.71ccbf9bf677ce55f1c22e43fbc9f0d5.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.fd4d617d.chunk.css.map": "/static/css/main.fd4d617d.chunk.css.map",
+    "static/js/2.8ef8cdf8.chunk.js.LICENSE.txt": "/static/js/2.8ef8cdf8.chunk.js.LICENSE.txt",
+    "static/media/1.png": "/static/media/1.cf7839ed.png",
+    "static/media/2.png": "/static/media/2.e72f7edb.png",
+    "static/media/3.png": "/static/media/3.ad647a9e.png",
+    "static/media/LicenseKey.png": "/static/media/LicenseKey.c4f53f94.png",
+    "static/media/MEDISIUM.png": "/static/media/MEDISIUM.a8f10662.png",
+    "static/media/POM-CHECKER.png": "/static/media/POM-CHECKER.1ecaa9a3.png",
+    "static/media/POM-CHECKER_LandingPage.png": "/static/media/POM-CHECKER_LandingPage.1ab06ab3.png",
+    "static/media/ReleasePage.png": "/static/media/ReleasePage.16c100f7.png",
+    "static/media/TeamElysium_LandingPage.png": "/static/media/TeamElysium_LandingPage.3d2a240b.png",
+    "static/media/main.scss": "/static/media/noto-sans-kr-v12-latin_korean-regular.7b91af55.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c2b20a0b.js",
+    "static/js/2.8ef8cdf8.chunk.js",
+    "static/css/main.fd4d617d.chunk.css",
+    "static/js/main.332d07c7.chunk.js"
+  ]
+}
