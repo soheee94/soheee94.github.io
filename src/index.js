@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 import "./style/main.scss";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter, HashRouter } from "react-router-dom"; // browsuerRouter 불러오기
+import { HashRouter } from "react-router-dom"; // browsuerRouter 불러오기
 
 ReactDOM.render(
-  <HashRouter basename={process.env.PUBLIC_URL}>
+  <HashRouter>
     <App />
   </HashRouter>,
   document.getElementById("root")
