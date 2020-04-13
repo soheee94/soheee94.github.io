@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e67ff650989f33bb1c02381047a97189",
+    "revision": "b070b50b19d9b0d654cc698c9a87d2ac",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "f3b5f4edb7b2741e36f6",
+    "revision": "935a9edf4ab3c0fb7c2d",
     "url": "/portfolio/static/css/main.875b1550.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/js/2.20c9accd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f3b5f4edb7b2741e36f6",
-    "url": "/portfolio/static/js/main.fffcf71e.chunk.js"
+    "revision": "935a9edf4ab3c0fb7c2d",
+    "url": "/portfolio/static/js/main.d598eb57.chunk.js"
   },
   {
     "revision": "0d98471f6c3b69ca4251",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "62f200f6538f5d54ad06eadda222224f",
     "url": "/portfolio/static/media/1.62f200f6.png"
+  },
+  {
+    "revision": "7237781c73dc7a53760adf1402373abf",
+    "url": "/portfolio/static/media/1.7237781c.png"
   },
   {
     "revision": "a325c7f65504cf94c0c21ce7bb071116",
@@ -48,14 +52,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/1.cf7839ed.png"
   },
   {
-    "revision": "e22dfabfd3703116b0542d96b53c1960",
-    "url": "/portfolio/static/media/1.e22dfabf.png"
-  },
-  {
-    "revision": "eac516a1e65179064f13c7fd017672d5",
-    "url": "/portfolio/static/media/1.eac516a1.png"
-  },
-  {
     "revision": "74b73199d934830108fa172fdbc590a9",
     "url": "/portfolio/static/media/2.74b73199.png"
   },
@@ -64,12 +60,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/2.90ad2fb0.png"
   },
   {
-    "revision": "a2ae5e095bc6ec5485c8af218f5d4149",
-    "url": "/portfolio/static/media/2.a2ae5e09.png"
-  },
-  {
     "revision": "ab0f835e8d0a4209047aa81a9c07e45e",
     "url": "/portfolio/static/media/2.ab0f835e.gif"
+  },
+  {
+    "revision": "c08ef833c970c7c389652ad0377c369b",
+    "url": "/portfolio/static/media/2.c08ef833.png"
   },
   {
     "revision": "e72f7edbdecf8b2b44b12f5fec765cd2",
@@ -80,8 +76,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/3.ad647a9e.png"
   },
   {
-    "revision": "9e975d827b1822e731c944c0013d08f6",
-    "url": "/portfolio/static/media/FIT-CHECKER.9e975d82.png"
+    "revision": "6c4f31a825f5c164032b02bd6e8db3ec",
+    "url": "/portfolio/static/media/FIT-CHECKER.6c4f31a8.png"
   },
   {
     "revision": "c4f53f943bc2147da38183831a8f652b",
@@ -106,10 +102,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3d2a240b3c88dd73efa9ee604cae3654",
     "url": "/portfolio/static/media/TeamElysium_LandingPage.3d2a240b.png"
-  },
-  {
-    "revision": "df2ce090c331cd59fa216a605e5bfbf5",
-    "url": "/portfolio/static/media/TodoList.df2ce090.png"
   },
   {
     "revision": "3837a40c4f3871426a6b6b78adf90e2b",
