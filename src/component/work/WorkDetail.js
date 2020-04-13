@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled, { css } from "styled-components";
 import palette from "../../lib/style/palette";
 import media from "../../lib/style/media";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import useLazyImageObserver from "../../lib/useLazyImageObserver";
 
 function WorkDetail({ category, data, image }) {
-  console.log(data);
   return (
     <Block>
       <Category>{category}</Category>
@@ -22,12 +22,12 @@ const WorkDetailDescriptionList = ({ data }) => {
       </Title>
       <DescriptionList>
         {description.map((text, index) => {
-          const isLandingPage = text.includes("홈페이지 바로가기");
+          const isLandingPage = text.includes("바로가기");
           return (
             <Description key={index} isLandingPage={isLandingPage}>
               {isLandingPage ? (
                 <span onClick={() => window.open(text.split("-")[1])}>
-                  {"홈페이지 바로가기"}
+                  {text.split("-")[0]}
                   <FaExternalLinkAlt />
                 </span>
               ) : (
@@ -43,9 +43,19 @@ const WorkDetailDescriptionList = ({ data }) => {
 
 const WorkDetailImageList = ({ data }) => {
   const { folder, files } = data;
-  return files.map(file => (
-    <img src={require(`../../asset/images/${folder}/${file}`)} alt="실행 화면 이미지" />
-  ));
+  return files.map((file, index) => <WorkDetailImage file={file} key={index} folder={folder} />);
+};
+
+const WorkDetailImage = ({ file, folder }) => {
+  const target = useRef(null);
+  useLazyImageObserver(target);
+  return (
+    <img
+      ref={target}
+      data-src={require(`../../asset/images/${folder}/${file}`)}
+      alt="실행 화면 이미지"
+    />
+  );
 };
 
 const Block = styled.div`
@@ -65,6 +75,8 @@ const Block = styled.div`
 
   /* image */
   img {
+    display: block;
+    max-width: fit-content;
     width: 70%;
     margin-bottom: 1rem;
     ${media.medium} {

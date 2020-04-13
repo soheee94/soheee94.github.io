@@ -2,6 +2,79 @@
   "Works": [
     {
       "idx": 1,
+      "title": "FIT-CHECKER",
+      "thumbnail": "FIT-CHECKER.png",
+      "period": "2019.12 - 현재",
+      "introduction": [
+        {
+          "title": "환자의 체형 분석 및 전후 비교 프로그램",
+          "description": [
+            "여러 가지 진단 지표 측정 및 기록 관리를 위한 웹 프로그램",
+            "환자의 측정 결과 데이터 시각화 및 비교 분석"
+          ]
+        }
+      ],
+      "assignedTasks": [
+        {
+          "title": "Web Developer",
+          "description": [
+            "React 기반 컴포넌트 계층 구조 디자인",
+            "진단 지표 측정 관리를 위한 UI 및 기능 구현",
+            "Redux를 활용한 상태관리",
+            "axios를 통한 데이터 통신",
+            "Unity WebGL 연동 및 통신"
+          ]
+        }
+      ],
+      "toolOutcome": [
+        {
+          "title": "Tool & OutCome",
+          "description": ["REACT / Redux / Styled-Components / PHP / MySQL / WebGL"]
+        }
+      ],
+      "images": {
+        "folder": "FIT-CHECKER",
+        "files": ["1.png", "2.png"]
+      }
+    },
+    {
+      "idx": 2,
+      "title": "MEDISIUM",
+      "thumbnail": "MEDISIUM.png",
+      "period": "2019.11 ~ 2020.02",
+      "introduction": [
+        {
+          "title": "회사 내 의료 소프트웨어를 위한 환자 및 측정 관리 플랫폼",
+          "description": []
+        }
+      ],
+      "assignedTasks": [
+        {
+          "title": "Web Developer",
+          "description": [
+            "jQuery 기반 레거시 마이그레이션",
+            "React 기반 컴포넌트 계층 구조 디자인",
+            "환자, 병원 및 측정 관리 기능 개발",
+            "Redux를 활용한 상태관리",
+            "axios를 통한 데이터 통신",
+            "MYSQL 기반 데이터베이스 설계",
+            "PHP 7.x 기반 REST API 구축"
+          ]
+        }
+      ],
+      "toolOutcome": [
+        {
+          "title": "Tool & OutCome",
+          "description": ["REACT / Redux / Styled-Components / react-router / PHP / MySQL"]
+        }
+      ],
+      "images": {
+        "folder": "MEDISIUM",
+        "files": ["1.png", "2.png"]
+      }
+    },
+    {
+      "idx": 3,
       "title": "POM-CHECKER",
       "thumbnail": "POM-CHECKER.png",
       "period": "2017.09 ~ 현재 (유지보수)",
@@ -18,7 +91,7 @@
         {
           "title": "Web Developer",
           "description": [
-            "프론트엔드 / 백엔드 기술 환경 셋팅 및 전체 기능 구현",
+            "진단 지표 측정 관리를 위한 UI 및 기능 구현",
             "측정 결과 맞춤형 리포트 UI 개발",
             "Paper.js 기반 이미지 그림판 구현",
             "Chart.js 기반 데이터 차트 개발",
@@ -35,7 +108,7 @@
         {
           "title": "Tool & OutCome",
           "description": [
-            "HTML5 / CSS3 / SASS / Javascript / PHP / MySQL / npm / webpack",
+            "HTML5 / SASS / Javascript / PHP / MySQL / webpack",
             "병원, 한의원, 피트니스 등 60개 이상 판매",
             "전국 총판 대리점 계약",
             "해외 진출 준비 중"
@@ -48,50 +121,50 @@
       }
     },
     {
-      "idx": 2,
-      "title": "MEDISIUM",
-      "thumbnail": "MEDISIUM.png",
-      "period": "2019.11 ~ 현재 (유지보수)",
+      "idx": 4,
+      "title": "React Todo APP",
+      "thumbnail": "TodoList.png",
+      "period": "2020.04",
       "introduction": [
         {
-          "title": "회사 내 의료 소프트웨어를 위한 환자 및 측정 관리 플랫폼",
-          "description": []
+          "title": "React 기반 할 일 목록",
+          "description": [
+            "개인 프로젝트",
+            "Github 바로가기-https://github.com/soheee94/react-todo-app"
+          ]
         }
       ],
       "assignedTasks": [
         {
           "title": "Web Developer",
           "description": [
-            "프론트엔드 / 백엔드 기술 환경 셋팅 및 전체 기능 구현",
-            "React 기반 컴포넌트 계층 구조 디자인",
-            "환자, 병원 및 측정 관리 기능 개발",
-            "소프트웨어에 따른 테마 적용",
-            "MYSQL 기반 데이터베이스 설계",
-            "PHP 7.x 기반 REST API 구축",
-            "Axios를 통한 데이터 통신"
+            "할 일 조회/추가/수정/삭제 구현",
+            "복원 및 백업 기능 구현",
+            "먼저 할 일(참조) 등록 기능 구현",
+            "Node.js express 기반 REST API 구현"
           ]
         }
       ],
       "toolOutcome": [
         {
           "title": "Tool & OutCome",
-          "description": ["REACT / SASS / Axios / styled-components / react-router / PHP / MySQL"]
+          "description": ["React / Redux / styled-components / axios / node.js"]
         }
       ],
       "images": {
-        "folder": "MEDISIUM",
-        "files": ["1.png", "2.png"]
+        "folder": "TodoList",
+        "files": ["1.gif", "2.gif"]
       }
     },
     {
-      "idx": 3,
+      "idx": 5,
       "title": "Release Page",
       "thumbnail": "ReleasePage.png",
       "period": "2019.12",
       "introduction": [
         {
           "title": "POM-CHECKER 버전 릴리즈 소개 페이지",
-          "description": []
+          "description": ["개인 프로젝트"]
         }
       ],
       "assignedTasks": [
@@ -120,7 +193,7 @@
       }
     },
     {
-      "idx": 4,
+      "idx": 6,
       "title": "License Key Manager",
       "thumbnail": "LicenseKey.png",
       "period": "2019.09 ~ 2019.10",
@@ -162,7 +235,7 @@
       }
     },
     {
-      "idx": 5,
+      "idx": 7,
       "title": "POM-CHECKER Landing Page",
       "thumbnail": "POM-CHECKER_LandingPage.png",
       "period": "2018.08",
@@ -195,7 +268,7 @@
       }
     },
     {
-      "idx": 6,
+      "idx": 8,
       "title": "TeamElysium Landing Page",
       "thumbnail": "TeamElysium_LandingPage.png",
       "period": "2018.06",
