@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9e1e512390b70b5b597cc681d2d0ddc8",
+    "revision": "e67ff650989f33bb1c02381047a97189",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "307e17cb13a65310641b",
+    "revision": "f3b5f4edb7b2741e36f6",
     "url": "/portfolio/static/css/main.875b1550.chunk.css"
   },
   {
-    "revision": "8322065211be5adeda04",
-    "url": "/portfolio/static/js/2.26be6509.chunk.js"
+    "revision": "01f5de051bf4587b39b4",
+    "url": "/portfolio/static/js/2.20c9accd.chunk.js"
   },
   {
     "revision": "2d4e50db9bebc1822939159016933eb5",
-    "url": "/portfolio/static/js/2.26be6509.chunk.js.LICENSE.txt"
+    "url": "/portfolio/static/js/2.20c9accd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "307e17cb13a65310641b",
-    "url": "/portfolio/static/js/main.39caef92.chunk.js"
+    "revision": "f3b5f4edb7b2741e36f6",
+    "url": "/portfolio/static/js/main.fffcf71e.chunk.js"
   },
   {
     "revision": "0d98471f6c3b69ca4251",
@@ -32,6 +32,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/1.62f200f6.png"
   },
   {
+    "revision": "a325c7f65504cf94c0c21ce7bb071116",
+    "url": "/portfolio/static/media/1.a325c7f6.gif"
+  },
+  {
     "revision": "b6dd1d676840ef2c2108307c10e76e46",
     "url": "/portfolio/static/media/1.b6dd1d67.png"
   },
@@ -44,6 +48,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/1.cf7839ed.png"
   },
   {
+    "revision": "e22dfabfd3703116b0542d96b53c1960",
+    "url": "/portfolio/static/media/1.e22dfabf.png"
+  },
+  {
+    "revision": "eac516a1e65179064f13c7fd017672d5",
+    "url": "/portfolio/static/media/1.eac516a1.png"
+  },
+  {
     "revision": "74b73199d934830108fa172fdbc590a9",
     "url": "/portfolio/static/media/2.74b73199.png"
   },
@@ -52,12 +64,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/2.90ad2fb0.png"
   },
   {
+    "revision": "a2ae5e095bc6ec5485c8af218f5d4149",
+    "url": "/portfolio/static/media/2.a2ae5e09.png"
+  },
+  {
+    "revision": "ab0f835e8d0a4209047aa81a9c07e45e",
+    "url": "/portfolio/static/media/2.ab0f835e.gif"
+  },
+  {
     "revision": "e72f7edbdecf8b2b44b12f5fec765cd2",
     "url": "/portfolio/static/media/2.e72f7edb.png"
   },
   {
     "revision": "ad647a9e64319a0f948f2a37a57ea210",
     "url": "/portfolio/static/media/3.ad647a9e.png"
+  },
+  {
+    "revision": "9e975d827b1822e731c944c0013d08f6",
+    "url": "/portfolio/static/media/FIT-CHECKER.9e975d82.png"
   },
   {
     "revision": "c4f53f943bc2147da38183831a8f652b",
@@ -82,6 +106,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3d2a240b3c88dd73efa9ee604cae3654",
     "url": "/portfolio/static/media/TeamElysium_LandingPage.3d2a240b.png"
+  },
+  {
+    "revision": "df2ce090c331cd59fa216a605e5bfbf5",
+    "url": "/portfolio/static/media/TodoList.df2ce090.png"
   },
   {
     "revision": "3837a40c4f3871426a6b6b78adf90e2b",
