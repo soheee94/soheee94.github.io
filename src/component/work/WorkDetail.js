@@ -1,9 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 import palette from "../../lib/style/palette";
 import media from "../../lib/style/media";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import useLazyImageObserver from "../../lib/useLazyImageObserver";
 
 function WorkDetail({ category, data, image }) {
   return (
@@ -43,11 +42,9 @@ const WorkDetailDescriptionList = ({ data }) => {
 
 const WorkDetailImageList = ({ data }) => {
   const { folder, files } = data;
-  return files.map((file, index) => <WorkDetailImage file={file} key={index} folder={folder} />);
-};
-
-const WorkDetailImage = ({ file, folder }) => {
-  return <img src={require(`../../asset/images/${folder}/${file}`)} alt="실행 화면 이미지" />;
+  return files.map((file, index) => (
+    <img key={index} src={require(`../../asset/images/${folder}/${file}`)} alt="실행 화면 이미지" />
+  ));
 };
 
 const Block = styled.div`
