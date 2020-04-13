@@ -130,7 +130,7 @@
           "title": "React 기반 할 일 목록",
           "description": [
             "개인 프로젝트",
-            "Github 바로가기-https://github.com/soheee94/react-todo-app"
+            "Github 바로가기_https://github.com/soheee94/react-todo-app"
           ]
         }
       ],
@@ -242,7 +242,7 @@
       "introduction": [
         {
           "title": "제품 랜딩 페이지",
-          "description": ["홈페이지 바로가기-http://pomchecker.com/"]
+          "description": ["홈페이지 바로가기_http://pomchecker.com/"]
         }
       ],
       "assignedTasks": [
@@ -275,7 +275,7 @@
       "introduction": [
         {
           "title": "(주) 팀엘리시움 회사 소개 페이지",
-          "description": ["홈페이지 바로가기-http://teamelysium.kr/"]
+          "description": ["홈페이지 바로가기_http://teamelysium.kr/"]
         }
       ],
       "assignedTasks": [

@@ -25,8 +25,8 @@ const WorkDetailDescriptionList = ({ data }) => {
           return (
             <Description key={index} isLandingPage={isLandingPage}>
               {isLandingPage ? (
-                <span onClick={() => window.open(text.split("-")[1])}>
-                  {text.split("-")[0]}
+                <span onClick={() => window.open(text.split("_")[1])}>
+                  {text.split("_")[0]}
                   <FaExternalLinkAlt />
                 </span>
               ) : (
