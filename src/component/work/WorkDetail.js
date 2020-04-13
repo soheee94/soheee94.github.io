@@ -47,15 +47,7 @@ const WorkDetailImageList = ({ data }) => {
 };
 
 const WorkDetailImage = ({ file, folder }) => {
-  const target = useRef(null);
-  useLazyImageObserver(target);
-  return (
-    <img
-      ref={target}
-      data-src={require(`../../asset/images/${folder}/${file}`)}
-      alt="실행 화면 이미지"
-    />
-  );
+  return <img src={require(`../../asset/images/${folder}/${file}`)} alt="실행 화면 이미지" />;
 };
 
 const Block = styled.div`
