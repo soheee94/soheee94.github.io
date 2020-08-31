@@ -5,7 +5,6 @@
 ### Project Stack
 
 - React
-- React Router
 - Styled Components
 
 ### Preview
