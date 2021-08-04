@@ -1,8 +1,8 @@
 import React from "react";
 import { ScrollProvider } from "./ScrollContext";
 import { Switch, Route } from "react-router-dom";
-import MainPage from "./page/MainPage";
-import WorkPage from "./page/WorkPage";
+import MainPage from "./pages/MainPage";
+import WorkPage from "./pages/WorkPage";
 import GlobalStyle from "./GlobalStyle";
 
 function App() {
