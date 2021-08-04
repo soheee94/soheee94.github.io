@@ -5,10 +5,15 @@ import media from "../../lib/style/media";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 function WorkDetail({ category, data, image }) {
+  if (!data) return null;
   return (
     <Block>
       <Category>{category}</Category>
-      {image ? <WorkDetailImageList data={data} /> : <WorkDetailDescriptionList data={data} />}
+      {image ? (
+        <WorkDetailImageList data={data} />
+      ) : (
+        <WorkDetailDescriptionList data={data} />
+      )}
     </Block>
   );
 }
@@ -43,7 +48,11 @@ const WorkDetailDescriptionList = ({ data }) => {
 const WorkDetailImageList = ({ data }) => {
   const { folder, files } = data;
   return files.map((file, index) => (
-    <img key={index} src={require(`../../asset/images/${folder}/${file}`)} alt="실행 화면 이미지" />
+    <img
+      key={index}
+      src={require(`../../asset/images/${folder}/${file}`)}
+      alt="실행 화면 이미지"
+    />
   ));
 };
 
@@ -109,7 +118,7 @@ const Description = styled.li`
   svg {
     margin-left: 0.375rem;
   }
-  ${props =>
+  ${(props) =>
     props.isLandingPage &&
     css`
       cursor: pointer;
@@ -120,7 +129,7 @@ const Description = styled.li`
 `;
 
 WorkDetail.defaultProps = {
-  image: false
+  image: false,
 };
 
 export default WorkDetail;

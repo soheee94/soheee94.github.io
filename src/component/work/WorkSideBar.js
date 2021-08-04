@@ -8,8 +8,14 @@ import { useHistory } from "react-router-dom";
 import media from "../../lib/style/media";
 import RoundButton from "../common/RoundButton";
 
-function WorkSideBar({ work, workTotalCount, prevWorkTitle, nextWorkTitle }) {
-  const { idx, title, period } = work;
+function WorkSideBar({
+  work,
+  index,
+  workTotalCount,
+  prevWorkTitle,
+  nextWorkTitle,
+}) {
+  const { title, period } = work;
   const history = useHistory();
   return (
     <>
@@ -21,16 +27,16 @@ function WorkSideBar({ work, workTotalCount, prevWorkTitle, nextWorkTitle }) {
         </WorkTitle>
         <Navigation>
           <RoundButton
-            disabled={idx === 1}
+            disabled={index === 0}
             onClick={() => history.push(`/work/${prevWorkTitle}`)}
           >
             <MdKeyboardArrowLeft />
           </RoundButton>
           <h4>
-            {idx} / {workTotalCount}
+            {index + 1} / {workTotalCount}
           </h4>
           <RoundButton
-            disabled={idx === workTotalCount}
+            disabled={index === workTotalCount - 1}
             onClick={() => history.push(`/work/${nextWorkTitle}`)}
           >
             <MdKeyboardArrowRight />

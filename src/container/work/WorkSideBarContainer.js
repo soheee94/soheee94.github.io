@@ -6,17 +6,17 @@ import WorkSideBar from "../../component/work/WorkSideBar";
 const WorkSideBarContainer = withRouter(({ match }) => {
   const { title } = match.params;
   const workList = data.Works;
-  const work = workList.filter(work => work.title === title)[0];
+  const work = workList.filter((work) => work.title === title)[0];
 
   const workTotalCount = Object.keys(workList).length;
-  const { idx } = work;
-  const prevWorkTitle = idx > 1 && workList.filter(work => work.idx === idx - 1)[0].title;
-  const nextWorkTitle =
-    idx < workTotalCount && workList.filter(work => work.idx === idx + 1)[0].title;
+  const index = workList.findIndex((work) => work.title === title);
+  const prevWorkTitle = index > 0 && workList[index - 1].title;
+  const nextWorkTitle = index < workTotalCount - 1 && workList[index + 1].title;
 
   return (
     <WorkSideBar
       work={work}
+      index={index}
       workTotalCount={workTotalCount}
       prevWorkTitle={prevWorkTitle}
       nextWorkTitle={nextWorkTitle}
