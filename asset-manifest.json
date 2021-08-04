@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.875b1550.chunk.css",
-    "main.js": "/portfolio/static/js/main.701be968.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.701be968.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.1a096e8f.chunk.css",
+    "main.js": "/portfolio/static/js/main.64728c27.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.64728c27.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.44087e9b.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.44087e9b.js.map",
-    "static/js/2.20c9accd.chunk.js": "/portfolio/static/js/2.20c9accd.chunk.js",
-    "static/js/2.20c9accd.chunk.js.map": "/portfolio/static/js/2.20c9accd.chunk.js.map",
+    "static/js/2.c60f517b.chunk.js": "/portfolio/static/js/2.c60f517b.chunk.js",
+    "static/js/2.c60f517b.chunk.js.map": "/portfolio/static/js/2.c60f517b.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.1c8276119d6c58b1887a8b167a06b52c.js": "/portfolio/precache-manifest.1c8276119d6c58b1887a8b167a06b52c.js",
+    "precache-manifest.b3c2f9c51e321c412512d088c7aab1ac.js": "/portfolio/precache-manifest.b3c2f9c51e321c412512d088c7aab1ac.js",
     "service-worker.js": "/portfolio/service-worker.js",
-    "static/css/main.875b1550.chunk.css.map": "/portfolio/static/css/main.875b1550.chunk.css.map",
-    "static/js/2.20c9accd.chunk.js.LICENSE.txt": "/portfolio/static/js/2.20c9accd.chunk.js.LICENSE.txt",
+    "static/css/main.1a096e8f.chunk.css.map": "/portfolio/static/css/main.1a096e8f.chunk.css.map",
+    "static/js/2.c60f517b.chunk.js.LICENSE.txt": "/portfolio/static/js/2.c60f517b.chunk.js.LICENSE.txt",
     "static/media/1.png": "/portfolio/static/media/1.cf7839ed.png",
     "static/media/1.gif": "/portfolio/static/media/1.a325c7f6.gif",
     "static/media/2.png": "/portfolio/static/media/2.e72f7edb.png",
@@ -24,12 +24,13 @@
     "static/media/POM-CHECKER_LandingPage.png": "/portfolio/static/media/POM-CHECKER_LandingPage.1ab06ab3.png",
     "static/media/ReleasePage.png": "/portfolio/static/media/ReleasePage.16c100f7.png",
     "static/media/TeamElysium_LandingPage.png": "/portfolio/static/media/TeamElysium_LandingPage.3d2a240b.png",
+    "static/media/connect.png": "/portfolio/static/media/connect.e6b4d473.png",
     "static/media/main.scss": "/portfolio/static/media/noto-sans-kr-v12-latin_korean-regular.7b91af55.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.44087e9b.js",
-    "static/js/2.20c9accd.chunk.js",
-    "static/css/main.875b1550.chunk.css",
-    "static/js/main.701be968.chunk.js"
+    "static/js/2.c60f517b.chunk.js",
+    "static/css/main.1a096e8f.chunk.css",
+    "static/js/main.64728c27.chunk.js"
   ]
 }
